@@ -6,10 +6,14 @@ import Home from "./Components/Home/Home";
 import Blog from "./Components/Blog/Blog";
 import Treatment from "./Components/Treatment/Treatment";
 import About from "./Components/About/About";
+import AuthProvider from "./Context/AuthProvider";
+import LogIn from "./Components/LogIn/LogIn";
+import Registration from "./Components/Registration/Registration";
 
 function App() {
   return (
-    <div className="page-container">
+    <AuthProvider>
+      <div className="page-container">
       <div className="content-wrap">
         <BrowserRouter>
           <Header></Header>
@@ -29,11 +33,18 @@ function App() {
             <Route path="/blog">
               <Blog></Blog>
             </Route>
+            <Route path="/signin">
+              <LogIn></LogIn>
+            </Route>
+            <Route path="/registration">
+              <Registration></Registration>
+            </Route>
           </Switch>
         </BrowserRouter>
       </div>
       <Footer></Footer>
     </div>
+    </AuthProvider>
   );
 }
 
