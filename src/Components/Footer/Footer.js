@@ -4,22 +4,20 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className="main-footer bg-dark text-white w-100 p-3">
-      <Container className="footer-set d-flex align-items-center justify-content-between px-5 py-3">
+    <div className="main-footer text-white w-100 p-3">
+      <Container className="d-flex align-items-center justify-content-between px-5 py-3">
         {/*/////////////////////// Title ////////////////////// */}
         <div className="text-center d-grid">
           <strong className="text-white">
-            <span className="text-success">HEAL</span> CLINIC
+            <span style={{color:'#3EBBC4'}}>HEAL</span> CLINIC
           </strong>
-          <span className="hidden-footerText">
-            Copyright &copy; 2021 All Rights Reserved{" "}
-          </span>
+          <span>Copyright &copy; 2021 All Rights Reserved </span>
         </div>
 
         {/* ////////////////////// Connect With Us ////////////////////// */}
-        <div className="text-center ">
+        <div className="text-center">
           <div>
-            <span className="hidden-footerText">Connect With Us</span>
+            <span>Connect With Us</span>
           </div>
         </div>
 
@@ -27,9 +25,7 @@ const Footer = () => {
         <div className="text-center d-grid">
           <strong className="text-white hidden-footerText">ADDRESS</strong>
 
-          <span className="hidden-footerText">
-            California St, Stockton, United States
-          </span>
+          <span>California St, Stockton, United States</span>
 
           <span>+1 209-507-5152</span>
         </div>
