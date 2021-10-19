@@ -33,7 +33,7 @@ const Treatment = () => {
                 src="https://randomuser.me/api/portraits/women/51.jpg"
                 alt=""
               />{" "}
-              <strong style={{color:'#3EBBC4'}}>Dr. Virginia Apgar</strong>
+              <span style={{color:'#3EBBC4'}}>Dr. Virginia Apgar</span>
             </div>
           </div>
           <div>
@@ -77,7 +77,7 @@ const Treatment = () => {
                 src="https://randomuser.me/api/portraits/men/80.jpg"
                 alt=""
               />{" "}
-              <strong style={{color:'#3EBBC4'}}>Dr. Richard Thomson</strong>
+              <span style={{color:'#3EBBC4'}}>Dr. Richard Thomson</span>
             </div>
           </div>
         </div>
@@ -106,7 +106,7 @@ const Treatment = () => {
                 src="https://randomuser.me/api/portraits/women/52.jpg"
                 alt=""
               />{" "}
-              <strong style={{color:'#3EBBC4'}}>Dr. Ana Aslan</strong>
+              <span style={{color:'#3EBBC4'}}>Dr. Ana Aslan</span>
             </div>
           </div>
           <div>
@@ -150,7 +150,7 @@ const Treatment = () => {
                 src="https://randomuser.me/api/portraits/men/78.jpg"
                 alt=""
               />{" "}
-              <strong style={{color:'#3EBBC4'}}>Dr. Josh Barret</strong>
+              <span style={{color:'#3EBBC4'}}>Dr. Josh Barret</span>
             </div>
           </div>
         </div>
@@ -177,7 +177,7 @@ const Treatment = () => {
                 src="https://randomuser.me/api/portraits/men/90.jpg"
                 alt=""
               />{" "}
-              <strong style={{color:'#3EBBC4'}}>Dr. Robert William</strong>
+              <span style={{color:'#3EBBC4'}}>Dr. Robert William</span>
             </div>
           </div>
           <div>
@@ -221,7 +221,7 @@ const Treatment = () => {
                 src="https://randomuser.me/api/portraits/women/53.jpg"
                 alt=""
               />{" "}
-              <strong>Dr. Helen Brooke</strong>
+              <span style={{color:'#3EBBC4'}}>Dr. Helen Brooke</span>
             </div>
           </div>
         </div>

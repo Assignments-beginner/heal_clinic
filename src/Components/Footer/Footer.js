@@ -18,16 +18,16 @@ const Footer = () => {
               href="https://www.facebook.com/healclinicbelgium"
               target="_blank"
             >
-              <i class="fab fa-facebook px-2"></i>
+              <i className="fab fa-facebook px-2"></i>
             </a>
             <a
               href="https://www.youtube.com/channel/UC-ygYiYn3YKSAbKS9hw9eXw"
               target="_blank"
             >
-              <i class="fab fa-youtube px-2"></i>
+              <i className="fab fa-youtube px-2"></i>
             </a>
             <a href="https://twitter.com/healclinichom" target="_blank">
-              <i class="fab fa-twitter px-2"></i>
+              <i className="fab fa-twitter px-2"></i>
             </a>
           </div>
         </div>

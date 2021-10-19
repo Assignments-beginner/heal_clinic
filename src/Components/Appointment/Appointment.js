@@ -80,26 +80,26 @@ const Appointment = () => {
         </div>
 
         <div className="p-5 shadow bg-white">
-          <h4 className="text-uppercase">
-            <i style={{ color: "#3EBBC4" }} class="fas fa-history fs-2"></i>{" "}
+          <h4 style={{ color: "#0B114A" }} className="text-uppercase">
+            <i style={{ color: "#3EBBC4" }} className="fas fa-history fs-2"></i>{" "}
             &nbsp;CLINIC SECHDULE
           </h4>
           <br />
           <p>
             {" "}
-            <strong>Monday to Friday</strong> <br />{" "}
-            <span className="text-secondary">9:00 am to 5:00pm</span>{" "}
+            <strong style={{ color: "#0B114A" }}>Thursday to Friday</strong> <br />{" "}
+            <span className="text-secondary">9:00am to 5:00pm</span>{" "}
           </p>
 
           <p>
             {" "}
-            <strong>Monday to Friday</strong> <br />{" "}
-            <span className="text-secondary">9:00 am to 5:00pm</span>{" "}
+            <strong style={{ color: "#0B114A" }}>Monday to Wednesday</strong> <br />{" "}
+            <span className="text-secondary">9:00am to 5:00pm</span>{" "}
           </p>
 
           <p>
             {" "}
-            <strong>Emergancy Appointment</strong> <br />{" "}
+            <strong style={{ color: "#0B114A" }}>Emergancy Appointment</strong> <br />{" "}
             <span className="text-secondary">Anytime</span> <br />{" "}
             <span style={{ color: "#3EBBC4" }}>
               ( But you have to pay extra charge for emergency )
@@ -108,12 +108,12 @@ const Appointment = () => {
           <br />
           <span>
             {" "}
-            <i class="fas fa-phone"></i> +1 209-507-5152
+            <i style={{ color: "#0B114A" }} class="fas fa-phone"></i> +1 209-507-5152
           </span>
           <br />
           <span>
             {" "}
-            <i class="fas fa-envelope"></i> healclinic@gmail.com
+            <i style={{ color: "#0B114A" }} class="fas fa-envelope"></i> healclinic@gmail.com
           </span>
         </div>
       </Container>
