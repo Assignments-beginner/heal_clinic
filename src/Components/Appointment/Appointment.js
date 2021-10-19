@@ -69,7 +69,7 @@ const Appointment = () => {
               />
             </FloatingLabel>
 
-            <Form.Group className="mb-3" id="formGridCheckbox">
+            <Form.Group className="mt-3 mb-3" id="formGridCheckbox">
               <Form.Check type="checkbox" label="Check me out" />
             </Form.Group>
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const { dynamicId } = useParams();
@@ -72,11 +73,11 @@ const Services = () => {
         <div className="d-flex align-items-center">
           <div className="me-5">
             <h3>{singleServiceDetails?.serviceTitle}</h3>
-            <div>
-              {singleServiceDetails?.description}
-            </div>
+            <div>{singleServiceDetails?.description}</div>
             <div className="mt-3">
-              <strong>For more information check the Appointment section.</strong>
+              <strong>
+                For more information check our Appointment section.
+              </strong>
             </div>
           </div>
 
@@ -90,6 +91,12 @@ const Services = () => {
           </div>
         </div>
       </Container>
+      <div className="text-center pb-5">
+        <Link className="text-decoration-none" to="/home">
+          {" "}
+          <span style={{ color: "#3EBBC4", fontSize: '20px' }} >Back to Services</span>{" "}
+        </Link>
+      </div>
     </Container>
   );
 };

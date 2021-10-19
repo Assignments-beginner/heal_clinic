@@ -10,6 +10,7 @@ import LogIn from "./Components/LogIn/LogIn";
 import Registration from "./Components/Registration/Registration";
 import Appointment from "./Components/Appointment/Appointment";
 import Services from "./Components/Services/Services";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -28,15 +29,15 @@ function App() {
               <Route path="/about">
                 <About></About>
               </Route>
-              <Route path="/services/:dynamicId">
+              <PrivateRoute path="/services/:dynamicId">
                 <Services></Services>
-              </Route>
+              </PrivateRoute>
               <Route exact path="/treatment">
                 <Treatment></Treatment>
               </Route>
-              <Route path="/appointment">
+              <PrivateRoute  path="/appointment">
                 <Appointment></Appointment>
-              </Route>
+              </PrivateRoute>
               <Route path="/signin">
                 <LogIn></LogIn>
               </Route>
