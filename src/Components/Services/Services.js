@@ -17,7 +17,6 @@ const Services = () => {
     const getService = services.find(
       (serviceDetails) => serviceDetails.id === dynamicId
     );
-    //check the id value string / number if string then (===) if number then (==)
     console.log(getService);
     setSingleServiceDetails(getService);
   }, [dynamicId, services]);
@@ -69,7 +68,28 @@ const Services = () => {
         </div>
       </Container>
       {/* Service Description */}
-      
+      <Container className="mb-5 p-5">
+        <div className="d-flex align-items-center">
+          <div className="me-5">
+            <h3>{singleServiceDetails?.serviceTitle}</h3>
+            <div>
+              {singleServiceDetails?.description}
+            </div>
+            <div className="mt-3">
+              <strong>For more information check the Appointment section.</strong>
+            </div>
+          </div>
+
+          <div>
+            <img
+              width="510"
+              height="345"
+              src={singleServiceDetails?.serviceImg}
+              alt=""
+            />
+          </div>
+        </div>
+      </Container>
     </Container>
   );
 };
