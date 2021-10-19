@@ -9,41 +9,45 @@ import AuthProvider from "./Context/AuthProvider";
 import LogIn from "./Components/LogIn/LogIn";
 import Registration from "./Components/Registration/Registration";
 import Appointment from "./Components/Appointment/Appointment";
+import Services from "./Components/Services/Services";
 
 function App() {
   return (
     <AuthProvider>
       <div className="page-container">
-      <div className="content-wrap">
-        <BrowserRouter>
-          <Header></Header>
-          <Switch>
-            <Route exact path="/">
-              <Home></Home>
-            </Route>
-            <Route path="/home">
-              <Home></Home>
-            </Route>
-            <Route exact path="/about">
-              <About></About>
-            </Route>
-            <Route exact path="/treatment">
-              <Treatment></Treatment>
-            </Route>
-            <Route path="/appointment">
-              <Appointment></Appointment>
-            </Route>
-            <Route path="/signin">
-              <LogIn></LogIn>
-            </Route>
-            <Route path="/registration">
-              <Registration></Registration>
-            </Route>
-          </Switch>
-        </BrowserRouter>
+        <div className="content-wrap">
+          <BrowserRouter>
+            <Header></Header>
+            <Switch>
+              <Route exact path="/">
+                <Home></Home>
+              </Route>
+              <Route path="/home">
+                <Home></Home>
+              </Route>
+              <Route path="/about">
+                <About></About>
+              </Route>
+              <Route path="/services/:dynamicId">
+                <Services></Services>
+              </Route>
+              <Route exact path="/treatment">
+                <Treatment></Treatment>
+              </Route>
+              <Route path="/appointment">
+                <Appointment></Appointment>
+              </Route>
+              <Route path="/signin">
+                <LogIn></LogIn>
+              </Route>
+              <Route path="/registration">
+                <Registration></Registration>
+              </Route>
+            </Switch>
+          </BrowserRouter>
+        </div>
+        <Footer></Footer>
       </div>
-      <Footer></Footer>
-    </div>
     </AuthProvider>
   );
 }

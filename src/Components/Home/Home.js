@@ -6,31 +6,40 @@ import "./Home.css";
 const Home = () => {
   const [programs, setPrograms] = useState([]);
   useEffect(() => {
-    fetch("/generated.json")
+    fetch("/services.json")
       .then((res) => res.json())
       .then((data) => setPrograms(data));
   }, []);
   return (
-    <div className="position-relative">
+    <div>
       <div>
         <img className="img-fluid w-100" src={banner} alt="" />
         <h1
           style={{ color: "#0B114A" }}
-          className="position-absolute carousel-caption text-start home"
+          className="carousel-caption text-start home"
         >
-          WELCOME <br />TO&nbsp;
-          <span style={{ color: "#3EBBC4" }} className="tiny-shadow">HEAL</span> CLINIC
+          WELCOME <br />
+          TO&nbsp;
+          <span style={{ color: "#3EBBC4" }} className="tiny-shadow">
+            HEAL
+          </span>{" "}
+          CLINIC
         </h1>
       </div>
 
       <Container>
-      <Row className="mt-3 mx-auto g-5">
+      <h2
+        style={{ color: "#0B114A" }}
+        className="text-center p-5 text-uppercase"
+      >
+        check out our services
+      </h2>
+        <Row className="gy-2 gx-5 pb-5">
           {programs.map((program) => (
             <HomePrograms key={program.id} program={program}></HomePrograms>
           ))}
         </Row>
       </Container>
-
     </div>
   );
 };

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "1",
+    "doctorId": "1",
+    "doctorName": "Dr. Helen Brooke",
+    "serviceImg": "https://media.istockphoto.com/photos/3d-rendering-of-human-brain-on-technology-background-picture-id611992272?b=1&k=20&m=611992272&s=170667a&w=0&h=qAfycBm8G2DJWvJgfNK7EKh3C7vHH6cyGKMQtqj6vAo=",
+    "doctorImg": "https://html.softtechitltd.com/physicmed/physicmed/assets/images/team2.png",
+    "serviceTitle": "Neurology",
+    "heading": "Neurology is the branch of medicine concerned with the study and treatment of disorders of the nervous system.",
+    "description": "A neurologist is a physician specializing in neurology and trained to investigate, or diagnose and treat neurological disorders.Neurologists treat a myriad of neurologic conditions, including stroke, seizures, movement disorders such as Parkinson's disease, autoimmune neurologic disorders such as multiple sclerosis, headache disorders like migraine and dementias such as Alzheimer's disease.[3] Neurologists may also be involved in clinical research, clinical trials, and basic or translational research. While neurology is a nonsurgical specialty, its corresponding surgical specialty is neurosurgery.",
+    "greetings": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+  },
+  {
+    "id": "2",
+    "doctorId": "2",
+    "doctorName": "Dr. Robert William",
+    "serviceImg": "https://media.istockphoto.com/photos/machine-is-prepared-for-the-patient-shooting-picture-id637555066?b=1&k=20&m=637555066&s=170667a&w=0&h=V4Y0_MI7Sg9YGZWCJ_kbsedeHAZQqxOaOmkyGgNYDzM=",
+    "doctorImg": "https://html.softtechitltd.com/physicmed/physicmed/assets/images/team01.png",
+    "serviceTitle": "CT Scan Service",
+    "heading": "A computed tomography (CT or CAT) scan allows doctors to see inside your body.",
+    "description": "CT is a commonly performed procedure. Scanners are found not only in hospital X-ray departments, but also in outpatient offices. CT has revolutionized medicine because it allows doctors to see diseases that, in the past, could often only be found at surgery or at autopsy.",
+    "greetings": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+  },
+  {
+    "id": "3",
+    "doctorId": "3",
+    "doctorName": "Dr. Josh Barret",
+    "serviceImg": "https://media.istockphoto.com/photos/emergency-room-picture-id901182716?b=1&k=20&m=901182716&s=170667a&w=0&h=Bo73H6jt-2F1hGYAlxNonLe5LHZ-qmZYX-4v8PHF7ZM=",
+    "doctorImg": "https://html.softtechitltd.com/physicmed/physicmed/assets/images/team03.png",
+    "serviceTitle": "General Surgery",
+    "heading": "Surgery is any procedure that alters body tissues to diagnose or treat a medical condition.",
+    "description": "Today, most general surgeons are familiar with minimally invasive techniques like laparoscopy. Laparoscopic surgeries involve much smaller tools, including tiny cameras that let the surgeon see what’s going on inside your body. These specialized instruments mean that the surgeon can make much smaller cuts than they would with traditional procedures. General surgeons have a broad knowledge of many different diseases and conditions. They will recommend whether you need surgery and what kind of surgery would be appropriate.",
+    "greetings": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+  },
+  {
+    "id": "4",
+    "doctorId": "4",
+    "doctorName": "Dr. Ana Aslan",
+    "serviceImg": "https://media.istockphoto.com/photos/young-woman-at-mesotherapy-treatment-picture-id1246064818?b=1&k=20&m=1246064818&s=170667a&w=0&h=hThmlFDPt_iYyr_-J-DLMnMGzrrGI1jUNEkopx5ejpY=",
+    "doctorImg": "https://html.softtechitltd.com/physicmed/physicmed/assets/images/team3.png",
+    "serviceTitle": "Dermatology",
+    "heading": "Dermatology is the branch of medicine dealing with the skin",
+    "description": "The skin is an incredible organ. It is your first line of defense against disease, protects your other organs, warms you up and cools you down, and sends messages about how healthy you are inside. Dermatologists are expert medical doctors and skin surgeons with the unique skills and experience to offer the best care for the organ that cares for you. Dermatologists have extensive training, going to school for 12 years or more to learn to diagnose and treat more than 3,000 diseases of the skin, hair, and nails as well as cosmetic concerns. Patients see dermatologists for issues that are much more than skin deep. Problems with their skin can harm patients’ sense of self-worth, create discomfort that can make everyday activities difficult, and, in some instances, threaten lives.",
+    "greetings": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+  },
+  {
+    "id": "5",
+    "doctorId": "5",
+    "doctorName": "Dr. Richard Thomson",
+    "serviceImg": "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHdvbWVuJ3MlMjBjYXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "doctorImg": "https://html.softtechitltd.com/physicmed/physicmed/assets/images/team1.png",
+    "serviceTitle": "Women's Care",
+    "heading": "At Women's Care we provide the highest level of care through our skilled professionals",
+    "description": "For many, raising a family and having children is a dream. Children can bring joy and happiness into one’s life! Women’s Care understands that the past two years have been extremely difficult from the COVID-19 pandemic and that it has raised numerous questions about safe pregnancy. Now, the main concern has shifted to the COVID-19 vaccine and its effect on pregnancy. New data shows that the vaccine is safe for both the mother and child, despite the ongoing misconceptions and false claims. According to Brant Cooper, MD at Women’s Care, health officials are much more confident about the safety of the COVID-19 vaccine than just six months ago. With the Delta variant surge, it is important to consider vaccination to protect yourself, your community and your baby.",
+    "greetings": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+  },
+  {
+    "id": "6",
+    "doctorId": "6",
+    "doctorName": "Dr. Virginia Apgar",
+    "serviceImg": "https://media.istockphoto.com/photos/mid-section-of-man-suffering-with-knee-pain-picture-id804154084?b=1&k=20&m=804154084&s=170667a&w=0&h=Ff2PzMSLrVvF56qwhCVUo2mPvf5UppKHBKPqrPwcyk0=",
+    "doctorImg": "https://html.softtechitltd.com/physicmed/physicmed/assets/images/team02.png",
+    "serviceTitle": "Orthopaedic",
+    "heading": "Orthopaedics is the medical specialty that focuses on injuries and diseases of your body's musculoskeletal system.",
+    "description": "Orthopedic conditions are injuries and diseases that affect the musculoskeletal system. This body system includes the muscles, bones, nerves, joints, ligaments, tendons, and other connective tissues. Damage to any of these tissues or structures can come from chronic orthopedic diseases or from an injury. Such symptoms as pain, muscle spasms, numbness, swelling and stiffness may come and go depending on the specific condition and your activity level. Pain and other symptoms from orthopedic conditions can limit activity if it worsens with movement.",
+    "greetings": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+  }
+]
