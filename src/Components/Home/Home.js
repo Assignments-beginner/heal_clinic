@@ -11,12 +11,12 @@ const Home = () => {
       .then((data) => setPrograms(data));
   }, []);
   return (
-    <div>
+    <div className="position-relative">
       <div>
         <img className="img-fluid w-100" src={banner} alt="" />
         <h1
           style={{ color: "#0B114A" }}
-          className="carousel-caption text-start home"
+          className="position-absolute carousel-caption text-start home"
         >
           WELCOME <br />
           TO&nbsp;
@@ -28,12 +28,12 @@ const Home = () => {
       </div>
 
       <Container>
-      <h2
-        style={{ color: "#0B114A" }}
-        className="text-center p-5 text-uppercase"
-      >
-        check out our services
-      </h2>
+        <h2
+          style={{ color: "#0B114A" }}
+          className="text-center p-5 text-uppercase"
+        >
+          check out our services
+        </h2>
         <Row className="gy-2 gx-5 pb-5">
           {programs.map((program) => (
             <HomePrograms key={program.id} program={program}></HomePrograms>
