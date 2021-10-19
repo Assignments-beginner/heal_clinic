@@ -8,7 +8,7 @@ const Footer = () => {
       style={{ backgroundColor: "whiteSmoke" }}
       className="main-footer w-100"
     >
-      <Container className="d-flex align-items-center justify-content-between py-2">
+      <Container className="d-flex align-items-center justify-content-between py-4">
         {/* ////////////////////// Connect With Us ////////////////////// */}
         <div className="text-center d-grid">
           <strong style={{ color: "#0B114A" }}>Connect With Us</strong>
@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
 
         {/* ////////////////////// Open Hours ////////////////////// */}
-        <div className="text-center">
+        <div className="text-center mt-2">
           <p style={{ color: "#0B114A" }}>
             <strong>Open Hours</strong>
           </p>

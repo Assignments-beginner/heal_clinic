@@ -1,9 +1,10 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import doctor from '../../Images/About/doctor.png';
-import hours from '../../Images/About/24-hours.png';
-import lab from '../../Images/About/laboratory.png';
-import './About.css'
+import doctor from "../../Images/About/doctor.png";
+import hours from "../../Images/About/24-hours.png";
+import lab from "../../Images/About/laboratory.png";
+import ladyDoctor from "../../Images/About/about.png";
+import "./About.css";
 const About = () => {
   return (
     <div>
@@ -16,71 +17,64 @@ const About = () => {
 
       <Container className="d-flex mb-5 pb-5">
         <div className="d-grid px-5">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-            id dignissimos, quisquam quae harum nobis sequi natus enim
-            asperiores error.
+          <p style={{ color: "#0b114a" }} className="text-center">
+            Our top priority is you. Which means you get the answers and
+            assurance you deserve with accuracy you can trust.
           </p>
 
+          {/* bar-one */}
           <div>
-            <Container className="shadow radius p-3 d-flex align-items-center justify-content-center">
-            <div className="m-3">
-            <img src={doctor} alt="" />
-            </div>
-            <div className="d-grid align-items-center ms-3">
-              <h4>Professional Doctor</h4>
-            <span>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
-              quod in earum iusto error provident consequatur possimus totam
-              assumenda perferendis.
-            </span>
-            </div>
+            <Container className="shadow radius p-4 d-flex align-items-center justify-content-center">
+              <div className="m-3">
+                <img src={doctor} alt="" />
+              </div>
+              <div className="d-grid align-items-center ms-3">
+                <h5 className="text-uppercase">Professional Doctors</h5>
+                <span style={{ color: "#0b114a" }}>
+                  At Heal Clinic, over 50 doctors across 20 specialties are
+                  ready to care for you. Our special doctors treats complex or
+                  rare conditions in adults and children.
+                </span>
+              </div>
             </Container>
           </div>
-          
-          
+          {/* bar-two */}
           <div>
-            <Container className="shadow radius p-3 d-flex align-items-center justify-content-center">
-            <div className="m-3">
-            <img src={hours} alt="" />
-            </div>
-            <div className="d-grid align-items-center ms-3">
-              <h4>Professional Doctor</h4>
-            <span>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
-              quod in earum iusto error provident consequatur possimus totam
-              assumenda perferendis.
-            </span>
-            </div>
+            <Container className="shadow radius p-4 d-flex align-items-center justify-content-center">
+              <div className="m-3">
+                <img src={hours} alt="" />
+              </div>
+              <div className="d-grid align-items-center ms-3">
+                <h5 className="text-uppercase">24 Hours patient support</h5>
+                <span style={{ color: "#0b114a" }}>
+                  Our state-of-the-art treatment options, comprehensive care and
+                  24-hour availability help patients return to good health as
+                  quickly as possible.
+                </span>
+              </div>
             </Container>
           </div>
-          
+          {/* bar-three */}
           <div>
-            <Container className="shadow radius p-3 d-flex align-items-center justify-content-center">
-            <div className="m-3">
-            <img src={lab} alt="" />
-            </div>
-            <div className="d-grid align-items-center ms-3">
-              <h4>Professional Doctor</h4>
-            <span>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
-              quod in earum iusto error provident consequatur possimus totam
-              assumenda perferendis.
-            </span>
-            </div>
+            <Container className="shadow radius p-4 d-flex align-items-center justify-content-center">
+              <div className="m-3">
+                <img src={lab} alt="" />
+              </div>
+              <div className="d-grid align-items-center ms-3">
+                <h5 className="text-uppercase">Excellients Lab Tests</h5>
+                <span style={{ color: "#0b114a" }}>
+                  Standardized processes and procedures are used across our
+                  global network of central labs for specialized testing and for
+                  high-volume safety testing.
+                </span>
+              </div>
             </Container>
           </div>
-          
 
-          
-          
           {/* stop */}
         </div>
         <div>
-          <img
-            src="https://html.softtechitltd.com/physicmed/physicmed/assets/images/about21.png"
-            alt=""
-          />
+          <img src={ladyDoctor} alt="" />
         </div>
       </Container>
     </div>
