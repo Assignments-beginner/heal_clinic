@@ -5,17 +5,18 @@ import hours from "../../Images/About/24-hours.png";
 import lab from "../../Images/About/laboratory.png";
 import ladyDoctor from "../../Images/About/about.png";
 import "./About.css";
+
 const About = () => {
   return (
-    <div>
+    <div style={{backgroundColor:'#F9FBFF'}} className="pb-5">
       <h1
         style={{ color: "#0B114A" }}
-        className="text-center m-3 p-3 text-uppercase"
+        className="text-center p-5 text-uppercase"
       >
         Why Choose Us
       </h1>
 
-      <Container className="d-flex mb-5 pb-5">
+      <Container className="d-flex pb-5">
         <div className="d-grid px-5">
           <p style={{ color: "#0b114a" }} className="text-center">
             Our top priority is you. Which means you get the answers and
@@ -24,7 +25,7 @@ const About = () => {
 
           {/* bar-one */}
           <div>
-            <Container className="shadow radius p-4 d-flex align-items-center justify-content-center">
+            <Container className="bg-white shadow radius p-4 d-flex align-items-center justify-content-center">
               <div className="m-3">
                 <img src={doctor} alt="" />
               </div>
@@ -40,7 +41,7 @@ const About = () => {
           </div>
           {/* bar-two */}
           <div>
-            <Container className="shadow radius p-4 d-flex align-items-center justify-content-center">
+            <Container className="bg-white shadow radius p-4 d-flex align-items-center justify-content-center">
               <div className="m-3">
                 <img src={hours} alt="" />
               </div>
@@ -56,7 +57,7 @@ const About = () => {
           </div>
           {/* bar-three */}
           <div>
-            <Container className="shadow radius p-4 d-flex align-items-center justify-content-center">
+            <Container className="bg-white shadow radius p-4 d-flex align-items-center justify-content-center">
               <div className="m-3">
                 <img src={lab} alt="" />
               </div>

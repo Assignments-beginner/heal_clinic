@@ -3,12 +3,12 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
-import Blog from "./Components/Blog/Blog";
 import Treatment from "./Components/Treatment/Treatment";
 import About from "./Components/About/About";
 import AuthProvider from "./Context/AuthProvider";
 import LogIn from "./Components/LogIn/LogIn";
 import Registration from "./Components/Registration/Registration";
+import Appointment from "./Components/Appointment/Appointment";
 
 function App() {
   return (
@@ -30,8 +30,8 @@ function App() {
             <Route exact path="/treatment">
               <Treatment></Treatment>
             </Route>
-            <Route path="/blog">
-              <Blog></Blog>
+            <Route path="/appointment">
+              <Appointment></Appointment>
             </Route>
             <Route path="/signin">
               <LogIn></LogIn>

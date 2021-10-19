@@ -50,9 +50,9 @@ const Header = () => {
             <NavLink
               activeClassName="navs-active"
               className="navs me-5 text-decoration-none"
-              to="/blog"
+              to="/appointment"
             >
-              Blog
+              Appointment
             </NavLink>
           </Nav>
           {/* User Profile */}
