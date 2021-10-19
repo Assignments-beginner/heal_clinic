@@ -17,9 +17,9 @@ const Appointment = () => {
       >
         Make An Appointement
       </h1>
-      <Container className="d-flex justify-content-between align-items-center">
+      <Container className="px-5 d-flex justify-content-between align-items-start">
         <div>
-          <Form >
+          <Form>
             <Row className="mb-3">
               <Form.Group as={Col} controlId="formGridText">
                 <Form.Label>First Name</Form.Label>
@@ -49,7 +49,7 @@ const Appointment = () => {
               <Form.Control placeholder="1234 Main St" />
             </Form.Group>
 
-            <Row className="mb-3">
+            <Row className="mb-4">
               <Form.Group as={Col} controlId="formGridCity">
                 <Form.Label>City</Form.Label>
                 <Form.Control />
@@ -61,12 +61,12 @@ const Appointment = () => {
               </Form.Group>
             </Row>
 
-            <FloatingLabel
-              controlId="floatingTextarea"
-              label="Message"
-              className="mb-3"
-            >
-              <Form.Control as="textarea" placeholder="Leave a comment here" />
+            <FloatingLabel controlId="floatingTextarea2" label="Message">
+              <Form.Control
+                as="textarea"
+                placeholder="Leave a comment here"
+                style={{ height: "100px" }}
+              />
             </FloatingLabel>
 
             <Form.Group className="mb-3" id="formGridCheckbox">
@@ -79,9 +79,8 @@ const Appointment = () => {
           </Form>
         </div>
 
-        <div className="p-5 m-5 shadow bg-white">
+        <div className="p-5 shadow bg-white">
           <h4 className="text-uppercase">
-              
             <i style={{ color: "#3EBBC4" }} class="fas fa-history fs-2"></i>{" "}
             &nbsp;CLINIC SECHDULE
           </h4>
