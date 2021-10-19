@@ -4,8 +4,13 @@ import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 
 const Registration = () => {
-
-  const {passwordBlurHandler, emailBlurHandler, nameBlurHandler, registrationHandler, error} = useAuth();
+  const {
+    passwordBlurHandler,
+    emailBlurHandler,
+    nameBlurHandler,
+    registrationHandler,
+    error,
+  } = useAuth();
 
   return (
     <Container className="mt-4 w-25">
@@ -15,7 +20,7 @@ const Registration = () => {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Name</Form.Label>
           <Form.Control
-              onBlur={nameBlurHandler}
+            onBlur={nameBlurHandler}
             type="text"
             placeholder="Enter Name"
           />
@@ -24,7 +29,7 @@ const Registration = () => {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email</Form.Label>
           <Form.Control
-              onBlur={emailBlurHandler}
+            onBlur={emailBlurHandler}
             type="email"
             placeholder="Enter Email"
           />
@@ -33,7 +38,7 @@ const Registration = () => {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
-              onBlur={passwordBlurHandler}
+            onBlur={passwordBlurHandler}
             type="password"
             placeholder="Password"
           />
@@ -45,7 +50,6 @@ const Registration = () => {
         <p className="text-danger">{error}</p>
         {/* Register Button */}
         <div className="mb-5">
-
           <Button onClick={registrationHandler} variant="primary" type="submit">
             Sign Up
           </Button>
