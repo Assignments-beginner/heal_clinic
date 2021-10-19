@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 
 const LogIn = () => {
-  const { signInWithGoogle } = useAuth();
+  const { signInWithGoogle, passwordBlurHandler, emailBlurHandler, signInHandler, error } = useAuth();
 
   const googleLoginHandler = () =>{
       signInWithGoogle();
@@ -18,16 +18,17 @@ const LogIn = () => {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email</Form.Label>
           <Form.Control
-            //   onBlur={}
+              onBlur={emailBlurHandler}
             type="email"
             placeholder="Enter Email"
+            
           />
         </Form.Group>
         {/* Password Field */}
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
-            //   onBlur={}
+              onBlur={passwordBlurHandler}
             type="password"
             placeholder="Password"
           />
@@ -36,9 +37,9 @@ const LogIn = () => {
         &nbsp; &nbsp;
         <Link to="/registration">Create One</Link>
         {/* Display Error */}
-        {/* <p className="text-danger">{error}</p> */}
+        <p className="text-danger">{error}</p>
         {/* Register Button */}
-        <Button className="mt-3" variant="primary" type="submit">
+        <Button onClick={signInHandler} className="mt-3" variant="primary" type="submit">
           Sign In
         </Button>
       </Form>
@@ -48,7 +49,7 @@ const LogIn = () => {
 
         <Button
           onClick={googleLoginHandler}
-          variant="danger w-50-lg me-3"
+          variant="outline-secondary px-5"
           size="sm"
         >
           Google

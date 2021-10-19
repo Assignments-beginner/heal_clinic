@@ -55,22 +55,23 @@ const Header = () => {
               Blog
             </NavLink>
           </Nav>
-          <Nav>
-            <NavLink to="/user">
+          {/* User Profile */}
+          <Nav className="d-flex align-items-center">
+            <div>
               {user?.email && (
                 <img
                   className="rounded-circle"
-                  width={24}
-                  height={24}
+                  width={32}
+                  height={32}
                   src={user.photoURL}
                   alt=""
                 />
               )}
-            </NavLink>
+            </div>
 
             <NavLink
               activeClassName="navs-active"
-              className="navs ms-3 me-3  text-decoration-none"
+              className="navs ms-3 me-3 text-decoration-none fs-6"
               to="/user"
             >
               {user.displayName}
@@ -79,7 +80,7 @@ const Header = () => {
             {!user?.email && (
               <NavLink
                 activeClassName="navs-active"
-                className="navs ms-3 me-3  text-decoration-none"
+                className="navs ms-3 me-3 text-decoration-none fs-6"
                 to="/signin"
               >
                 Sign in
@@ -89,7 +90,7 @@ const Header = () => {
             {user?.email && (
               <NavLink
                 activeClassName="navs-active"
-                className="navs ms-3 me-3  text-decoration-none"
+                className="navs ms-3 me-3 text-decoration-none fs-6"
                 to="/signin"
                 onClick={logOut}
               >
