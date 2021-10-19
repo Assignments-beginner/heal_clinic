@@ -11,6 +11,7 @@ import Registration from "./Components/Registration/Registration";
 import Appointment from "./Components/Appointment/Appointment";
 import Services from "./Components/Services/Services";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+import NotFound from "./Components/NotFound/NotFound";
 
 function App() {
   return (
@@ -35,14 +36,18 @@ function App() {
               <Route exact path="/treatment">
                 <Treatment></Treatment>
               </Route>
-              <PrivateRoute  path="/appointment">
+              <PrivateRoute path="/appointment">
                 <Appointment></Appointment>
-              </PrivateRoute> 
+              </PrivateRoute>
               <Route path="/signin">
                 <LogIn></LogIn>
               </Route>
               <Route path="/registration">
                 <Registration></Registration>
+              </Route>
+
+              <Route path="*">
+                <NotFound></NotFound>
               </Route>
             </Switch>
           </BrowserRouter>
