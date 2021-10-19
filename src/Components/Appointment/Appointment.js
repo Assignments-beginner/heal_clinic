@@ -102,7 +102,7 @@ const Appointment = () => {
             <strong>Emergancy Appointment</strong> <br />{" "}
             <span className="text-secondary">Anytime</span> <br />{" "}
             <span style={{ color: "#3EBBC4" }}>
-              (But you have to pay extra charge for emergency)
+              ( But you have to pay extra charge for emergency )
             </span>{" "}
           </p>
           <br />
