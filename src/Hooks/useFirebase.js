@@ -26,7 +26,7 @@ const useFirebase = () => {
 /*-------------------------------------------------------------------------------*\
   /////////////////////////// SIGN IN WITH GOOGLE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \*-------------------------------------------------------------------------------*/
-  const signInWithGoogle = () => {
+  /* const signInWithGoogle = () => {
     
     signInWithPopup(auth, googleProvider)
       .then((result) => {
@@ -36,6 +36,10 @@ const useFirebase = () => {
       .catch((error) => {
         setError(error.message);
       });
+  }; */
+  const signInWithGoogle = () => {
+    // setIsLoading(true);
+    return signInWithPopup(auth, googleProvider);
   };
 
   /*-------------------------------------------------------------------------------*\

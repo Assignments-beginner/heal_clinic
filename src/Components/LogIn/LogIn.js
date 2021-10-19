@@ -1,14 +1,30 @@
 import React from "react";
 import { Container, Form, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 
 const LogIn = () => {
-  const { signInWithGoogle, passwordBlurHandler, emailBlurHandler, signInHandler, error } = useAuth();
+  const {
+    signInWithGoogle,
+    passwordBlurHandler,
+    emailBlurHandler,
+    signInHandler,
+    error,
+  } = useAuth();
 
-  const googleLoginHandler = () =>{
-      signInWithGoogle();
-  }
+  const location = useLocation();
+  const history = useHistory();
+  // console.log(location.state?.from);
+  const redirect_uri = location.state?.from || "/home";
+
+  const googleLoginHandler = () => {
+    signInWithGoogle().then((result) => {
+      history.push(redirect_uri);
+    });
+    /* .catch((error) => {
+        setError(error.message);
+      }); */
+  };
 
   return (
     <Container className="mt-4 w-25">
@@ -18,17 +34,16 @@ const LogIn = () => {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email</Form.Label>
           <Form.Control
-              onBlur={emailBlurHandler}
+            onBlur={emailBlurHandler}
             type="email"
             placeholder="Enter Email"
-            
           />
         </Form.Group>
         {/* Password Field */}
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
-              onBlur={passwordBlurHandler}
+            onBlur={passwordBlurHandler}
             type="password"
             placeholder="Password"
           />
@@ -39,7 +54,12 @@ const LogIn = () => {
         {/* Display Error */}
         <p className="text-danger">{error}</p>
         {/* Register Button */}
-        <Button onClick={signInHandler} className="mt-3" variant="primary" type="submit">
+        <Button
+          onClick={signInHandler}
+          className="mt-3"
+          variant="primary"
+          type="submit"
+        >
           Sign In
         </Button>
       </Form>

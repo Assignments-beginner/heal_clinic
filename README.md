@@ -10,4 +10,4 @@
 <br />
 <li>Check out more treatment methods from our special doctors</li>
 <br />
-<li>Register Now ! Make an appointment</li>
+<li>Register Now ! Make an appointment.</li>
