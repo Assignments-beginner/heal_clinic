@@ -19,11 +19,11 @@ const useFirebase = () => {
   const [password, setPassword] = useState("");
   const [user, setUser] = useState({});
   const [error, setError] = useState("");
-  
+  const [isLoading, setIsLoading] = useState(true);
 
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
-/*-------------------------------------------------------------------------------*\
+  /*-------------------------------------------------------------------------------*\
   /////////////////////////// SIGN IN WITH GOOGLE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \*-------------------------------------------------------------------------------*/
   /* const signInWithGoogle = () => {
@@ -37,11 +37,25 @@ const useFirebase = () => {
         setError(error.message);
       });
   }; */
+
+  //After redirect_uri
   const signInWithGoogle = () => {
-    // setIsLoading(true);
+    setIsLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
-
+  /*-------------------------------------------------------------------------------*\
+  ///////////////////////////////// OBSERVER \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\*-------------------------------------------------------------------------------*/
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUser(user);
+      } else {
+        setUser({});
+      }
+      setIsLoading(false);
+    });
+  }, []);
   /*-------------------------------------------------------------------------------*\
   /////////////////////////////// FORM HANDLER \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \*-------------------------------------------------------------------------------*/
@@ -77,7 +91,7 @@ const useFirebase = () => {
     console.log(email);
     console.log(password);
 
-    processLogin(email, password);
+    return processLogin(email, password);
   };
   /*-------------------------------------------------------------------------------*\
   ///////////////////// CREATE NEW USER Email/Password \\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -114,18 +128,7 @@ const useFirebase = () => {
         setError(error.message);
       });
   };
-  /*-------------------------------------------------------------------------------*\
-  ///////////////////////////////// OBSERVER \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-\*-------------------------------------------------------------------------------*/
-  useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUser(user);
-      } else {
-        setUser({});
-      }
-    });
-  }, []);
+
   /*-------------------------------------------------------------------------------*\
   ////////////////////////////////// LOG OUT \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \*-------------------------------------------------------------------------------*/
@@ -134,6 +137,7 @@ const useFirebase = () => {
       .then(() => {
         setUser({});
       })
+      .finally(() => setIsLoading(true));
   };
   /*-------------------------------------------------------------------------------*\
   ////////////////////////////////// RETURN \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -141,6 +145,7 @@ const useFirebase = () => {
   return {
     user,
     error,
+    isLoading,
     passwordBlurHandler,
     emailBlurHandler,
     nameBlurHandler,
