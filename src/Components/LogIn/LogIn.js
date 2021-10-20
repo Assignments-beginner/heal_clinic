@@ -11,6 +11,7 @@ const LogIn = () => {
     processLogin,
     email,
     password,
+    setIsLoading,
     error,
     setError,
   } = useAuth();
@@ -23,7 +24,7 @@ const LogIn = () => {
   const googleLoginHandler = () => {
     signInWithGoogle().then((result) => {
       history.push(redirect_uri);
-    });
+    }).finally(() => setIsLoading(false));
   };
 
   /*-------------------------------------------------------------------------------*\
@@ -43,7 +44,7 @@ const LogIn = () => {
       })
       .catch((error) => {
         setError(error.message);
-      });
+      }).finally(() => setIsLoading(false));
   };
 
   //For Error Reload

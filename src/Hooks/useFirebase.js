@@ -68,7 +68,6 @@ const useFirebase = () => {
   const passwordBlurHandler = (e) => {
     setPassword(e.target.value);
   };
- 
 
   /*-------------------------------------------------------------------------------*\
   ///////////////////// CREATE NEW USER Email/Password \\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -78,8 +77,8 @@ const useFirebase = () => {
   };
 
   const registerNewUser = (email, password) => {
-    return createUserWithEmailAndPassword(auth, email, password)
-      /* .then((result) => {
+    return createUserWithEmailAndPassword(auth, email, password);
+    /* .then((result) => {
         const user = result.user;
         console.log(user);
         setError(""); //To clear the previous error
@@ -94,6 +93,7 @@ const useFirebase = () => {
   /////////////////// SIGN IN Email/Password \\\\\\\\\\\\\\\\\\\\\\\\\\
 \*-------------------------------------------------------------------------------*/
   const processLogin = (email, password) => {
+    setIsLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
     /* .then((result) => {
         const user = result.user;
@@ -113,7 +113,7 @@ const useFirebase = () => {
       .then(() => {
         setUser({});
       })
-      .finally(() => setIsLoading(true));
+      .finally(() => setIsLoading(false));
   };
   /*-------------------------------------------------------------------------------*\
   ////////////////////////////////// RETURN \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -133,6 +133,7 @@ const useFirebase = () => {
     signInWithGoogle,
     registerNewUser,
     processLogin,
+    setIsLoading,
     logOut,
   };
 };
