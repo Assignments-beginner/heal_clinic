@@ -20,7 +20,7 @@ const Registration = () => {
   const location = useLocation();
   const history = useHistory();
   // console.log(location.state?.from);
-  const redirect_uri = location.state?.from || "/signin";
+  const redirect_uri = location.state?.from || "/greetings";
 
   /*-------------------------------------------------------------------------------*\
   /////////////////////////////// REGISTER HANDLER \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -36,6 +36,7 @@ const Registration = () => {
         history.push(redirect_uri);
         const user = result.user;
         console.log(user);
+        userName();
         setError("");
       })
       .catch((error) => {

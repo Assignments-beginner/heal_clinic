@@ -94,7 +94,7 @@ const Services = () => {
       <div className="text-center pb-5">
         <Link className="text-decoration-none" to="/home">
           {" "}
-          <span style={{ color: "#3EBBC4", fontSize: '20px' }} >Back to Services</span>{" "}
+          <span style={{ color: "#3EBBC4", fontSize: '20px' }} >Back To Services</span>{" "}
         </Link>
       </div>
     </Container>

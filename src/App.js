@@ -12,6 +12,7 @@ import Appointment from "./Components/Appointment/Appointment";
 import Services from "./Components/Services/Services";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import NotFound from "./Components/NotFound/NotFound";
+import Greetings from "./Components/Greetings/Greetings";
 
 function App() {
   return (
@@ -44,6 +45,9 @@ function App() {
               </Route>
               <Route path="/registration">
                 <Registration></Registration>
+              </Route>
+              <Route path="/greetings">
+                <Greetings></Greetings>
               </Route>
 
               <Route path="*">
