@@ -11,6 +11,7 @@ const LogIn = () => {
     processLogin,
     email,
     password,
+    userName,
     setIsLoading,
     error,
     setError,
@@ -34,14 +35,13 @@ const LogIn = () => {
 \*-------------------------------------------------------------------------------*/
   const signInHandler = (e) => {
     e.preventDefault();
-    /*console.log("Preventing page reload from the FORM List's submit hitting.");*/
-    /* console.log(email);
-  console.log(password); */
+
     processLogin(email, password)
       .then((result) => {
         history.push(redirect_uri);
         const user = result.user;
         console.log(user);
+        userName();
         setError("");
       })
       .catch((error) => {

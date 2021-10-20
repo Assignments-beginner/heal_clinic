@@ -14,7 +14,7 @@ const Greetings = () => {
         ></i>
       </div>
       <div className="pb-5">
-          <h5 style={{ color: "#0B114A" }}>Your account has been created go to <Link style={{color: "#3EBBC4", textDecoration:'none'}} to="/signin">SIGN IN</Link> page.</h5>
+          <h5 style={{ color: "#0B114A" }}>Your account has been created just wait for the reload to autometic sign in. <br /> <br />Let's go to <Link style={{color: "#3EBBC4", textDecoration:'none'}} to="/home">HOME</Link> page.</h5>
       </div>
     </div>
   );

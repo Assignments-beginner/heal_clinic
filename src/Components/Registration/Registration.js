@@ -9,7 +9,6 @@ const Registration = () => {
     emailBlurHandler,
     nameBlurHandler,
     userName,
-    name,
     email,
     password,
     registerNewUser,
@@ -28,16 +27,16 @@ const Registration = () => {
   const registrationHandler = (e) => {
     e.preventDefault();
     /*console.log("Preventing page reload from the FORM List's submit hitting.");*/
-    console.log(name);
-    console.log(email);
-    console.log(password);
+    
     registerNewUser(email, password)
       .then((result) => {
-        history.push(redirect_uri);
+        history.push(redirect_uri);        
         const user = result.user;
-        console.log(user);
+        console.log(user);        
         userName();
         setError("");
+        window.location.reload();
+        
       })
       .catch((error) => {
         setError(error.message);
