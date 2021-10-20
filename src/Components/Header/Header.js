@@ -3,7 +3,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
 import mainLogo from "../../Images/main-logo.png";
-import userImg from "../../Images/user.png"
+import userImg from "../../Images/user.png";
 import useAuth from "../../Hooks/useAuth";
 
 const Header = () => {
@@ -59,16 +59,16 @@ const Header = () => {
           {/* User Profile */}
           <Nav className="d-flex align-items-center">
             <div>
-              {user?.photoURL && (
+              {user?.email && (
                 <img
-                  className="rounded-circle"
+                  className="rounded-circle user-img"
                   width={32}
                   height={32}
                   src={user.photoURL}
                   alt=""
                 />
               )}
-            </div>           
+            </div>
 
             <NavLink
               activeClassName="navs-active"

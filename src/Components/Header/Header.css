@@ -11,3 +11,7 @@
 .navs-active {
   color: #3EBBC4;
 }
+
+.user-img{
+  background-image: url('../../Images/user.png');
+}
