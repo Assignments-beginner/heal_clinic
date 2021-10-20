@@ -81,16 +81,6 @@ const useFirebase = () => {
   };
 
   /*-------------------------------------------------------------------------------*\
-  /////////////////////////////// SIGN IN HANDLER \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-\*-------------------------------------------------------------------------------*/
-  const signInHandler = (e) => {
-    e.preventDefault();
-    /*console.log("Preventing page reload from the FORM List's submit hitting.");*/
-    console.log(email);
-    console.log(password);
-    processLogin(email, password);
-  };
-  /*-------------------------------------------------------------------------------*\
   ///////////////////// CREATE NEW USER Email/Password \\\\\\\\\\\\\\\\\\\\\\\\\\
 \*-------------------------------------------------------------------------------*/
   const userName = () => {
@@ -115,15 +105,15 @@ const useFirebase = () => {
   /////////////////// SIGN IN Email/Password \\\\\\\\\\\\\\\\\\\\\\\\\\
 \*-------------------------------------------------------------------------------*/
   const processLogin = (email, password) => {
-    signInWithEmailAndPassword(auth, email, password)
-      .then((result) => {
+    return signInWithEmailAndPassword(auth, email, password);
+    /* .then((result) => {
         const user = result.user;
         console.log(user);
         setError("");
       })
       .catch((error) => {
         setError(error.message);
-      });
+      }); */
   };
 
   /*-------------------------------------------------------------------------------*\
@@ -141,6 +131,8 @@ const useFirebase = () => {
 \*-------------------------------------------------------------------------------*/
   return {
     user,
+    email,
+    password,
     error,
     isLoading,
     setError,
@@ -149,7 +141,7 @@ const useFirebase = () => {
     nameBlurHandler,
     signInWithGoogle,
     registrationHandler,
-    signInHandler,
+    processLogin,
     logOut,
   };
 };

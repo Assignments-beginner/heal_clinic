@@ -8,7 +8,9 @@ const LogIn = () => {
     signInWithGoogle,
     passwordBlurHandler,
     emailBlurHandler,
-    signInHandler,
+    processLogin,
+    email,
+    password,
     error,
     setError,
   } = useAuth();
@@ -22,10 +24,27 @@ const LogIn = () => {
     signInWithGoogle().then((result) => {
       history.push(redirect_uri);
     });
-    
   };
 
-  
+  /*-------------------------------------------------------------------------------*\
+  /////////////////////////////// SIGN IN HANDLER \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\*-------------------------------------------------------------------------------*/
+  const signInHandler = (e) => {
+    e.preventDefault();
+    /*console.log("Preventing page reload from the FORM List's submit hitting.");*/
+    /* console.log(email);
+  console.log(password); */
+    processLogin(email, password)
+      .then((result) => {
+        history.push(redirect_uri);
+        const user = result.user;
+        console.log(user);
+        setError("");
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
 
   //For Error Reload
   const reloader = () => {
@@ -58,12 +77,12 @@ const LogIn = () => {
         <div className="mb-3">
           <span>Don't have an account?</span>
           &nbsp; &nbsp;
-          <Link onClick={reloader} to="/registration">Create One</Link>
+          <Link onClick={reloader} to="/registration">
+            Create One
+          </Link>
         </div>
         {/* Display Error */}
-        <p className="text-danger">
-          {error}
-        </p>
+        <p className="text-danger">{error}</p>
         {/* Register Button */}
         <Button onClick={signInHandler} variant="primary" type="submit">
           Sign In
