@@ -1,18 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Greetings = () => {
   return (
     <div className="text-center">
-      <h1
-        style={{ color: "#0B114A" }}
-        className="p-5 text-uppercase"
-      >
-        Thanks for the registration ! 
-      </h1>
+      <h2 style={{ color: "#0B114A" }} className="p-5 text-uppercase">
+        Thanks for the registration !
+      </h2>
       <div>
-      <i style={{color:'#3EBBC4', fontSize:'250px'}} className="fas fa-heartbeat pb-5 mb-5"></i>
+        <i
+          style={{ color: "#3EBBC4", fontSize: "250px" }}
+          className="fas fa-heartbeat pb-4 mb-5"
+        ></i>
       </div>
-      
+      <div className="pb-5">
+          <h5 style={{ color: "#0B114A" }}>Your account has been created go to <Link style={{color: "#3EBBC4", textDecoration:'none'}} to="/signin">SIGN IN</Link> page.</h5>
+      </div>
     </div>
   );
 };
