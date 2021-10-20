@@ -10,6 +10,7 @@ const LogIn = () => {
     emailBlurHandler,
     signInHandler,
     error,
+    setError,
   } = useAuth();
 
   const location = useLocation();
@@ -21,12 +22,16 @@ const LogIn = () => {
     signInWithGoogle().then((result) => {
       history.push(redirect_uri);
     });
-    /* .catch((error) => {
-        setError(error.message);
-      }); */
+    
   };
 
   
+
+  //For Error Reload
+  const reloader = () => {
+    setError("");
+  };
+
   return (
     <Container className="mt-4 w-25">
       <p className="text-primary fs-1">Please Sign In</p>
@@ -49,18 +54,18 @@ const LogIn = () => {
             placeholder="Password"
           />
         </Form.Group>
-        <span>Don't have an account?</span>
-        &nbsp; &nbsp;
-        <Link to="/registration">Create One</Link>
+        {/* Not having an account */}
+        <div className="mb-3">
+          <span>Don't have an account?</span>
+          &nbsp; &nbsp;
+          <Link onClick={reloader} to="/registration">Create One</Link>
+        </div>
         {/* Display Error */}
-        <p className="text-danger">{error}</p>
+        <p className="text-danger">
+          {error}
+        </p>
         {/* Register Button */}
-        <Button
-          onClick={signInHandler}
-          className="mt-3"
-          variant="primary"
-          type="submit"
-        >
+        <Button onClick={signInHandler} variant="primary" type="submit">
           Sign In
         </Button>
       </Form>

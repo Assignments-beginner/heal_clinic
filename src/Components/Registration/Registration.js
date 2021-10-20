@@ -10,7 +10,13 @@ const Registration = () => {
     nameBlurHandler,
     registrationHandler,
     error,
+    setError,
   } = useAuth();
+
+  //For Error Reload
+  const reloader = () => {
+    setError("");
+  };
 
   return (
     <Container className="mt-4 w-25">
@@ -43,11 +49,22 @@ const Registration = () => {
             placeholder="Password"
           />
         </Form.Group>
-        <span>Already have an account?</span>
-        &nbsp; &nbsp;
-        <Link to="/signin">Sign In</Link>
+        {/*  Having an account */}
+        <div className="mb-3">
+          <span>Already have an account?</span>
+          &nbsp; &nbsp;
+          <Link onClick={reloader} to="/signin">
+            Sign In
+          </Link>
+        </div>
         {/* Display Error */}
+
+        {/* |.| */}
+
         <p className="text-danger">{error}</p>
+
+        {/* |.| */}
+
         {/* Register Button */}
         <div className="mb-5">
           <Button onClick={registrationHandler} variant="primary" type="submit">

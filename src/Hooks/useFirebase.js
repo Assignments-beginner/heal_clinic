@@ -77,7 +77,6 @@ const useFirebase = () => {
     console.log(name);
     console.log(email);
     console.log(password);
-
     registerNewUser(email, password);
   };
 
@@ -87,10 +86,8 @@ const useFirebase = () => {
   const signInHandler = (e) => {
     e.preventDefault();
     /*console.log("Preventing page reload from the FORM List's submit hitting.");*/
-    console.log(name);
     console.log(email);
     console.log(password);
-
     processLogin(email, password);
   };
   /*-------------------------------------------------------------------------------*\
@@ -146,6 +143,7 @@ const useFirebase = () => {
     user,
     error,
     isLoading,
+    setError,
     passwordBlurHandler,
     emailBlurHandler,
     nameBlurHandler,
