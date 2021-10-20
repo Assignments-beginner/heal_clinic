@@ -91,7 +91,7 @@ const useFirebase = () => {
     console.log(email);
     console.log(password);
 
-    return processLogin(email, password);
+    processLogin(email, password);
   };
   /*-------------------------------------------------------------------------------*\
   ///////////////////// CREATE NEW USER Email/Password \\\\\\\\\\\\\\\\\\\\\\\\\\

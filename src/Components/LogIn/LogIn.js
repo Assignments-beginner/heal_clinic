@@ -26,12 +26,7 @@ const LogIn = () => {
       }); */
   };
 
-  const redirectSignInHandler = () => {
-    signInHandler().then((result) => {
-      history.push(redirect_uri);
-    });
-  }
-
+  
   return (
     <Container className="mt-4 w-25">
       <p className="text-primary fs-1">Please Sign In</p>
@@ -61,7 +56,7 @@ const LogIn = () => {
         <p className="text-danger">{error}</p>
         {/* Register Button */}
         <Button
-          onClick={redirectSignInHandler}
+          onClick={signInHandler}
           className="mt-3"
           variant="primary"
           type="submit"
