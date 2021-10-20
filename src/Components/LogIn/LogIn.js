@@ -11,7 +11,6 @@ const LogIn = () => {
     processLogin,
     email,
     password,
-    userName,
     setIsLoading,
     error,
     setError,
@@ -41,7 +40,6 @@ const LogIn = () => {
         history.push(redirect_uri);
         const user = result.user;
         console.log(user);
-        userName();
         setError("");
       })
       .catch((error) => {

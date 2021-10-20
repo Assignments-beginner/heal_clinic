@@ -23,7 +23,7 @@ const useFirebase = () => {
 
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
-  /*-------------------------------------------------------------------------------*\
+/*-------------------------------------------------------------------------------*\
   /////////////////////////// SIGN IN WITH GOOGLE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \*-------------------------------------------------------------------------------*/
   /* const signInWithGoogle = () => {
@@ -43,7 +43,54 @@ const useFirebase = () => {
     setIsLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
-  /*-------------------------------------------------------------------------------*\
+/*-------------------------------------------------------------------------------*\
+  /////////////////////////////// FORM HANDLER \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\*-------------------------------------------------------------------------------*/
+  const nameBlurHandler = (e) => {
+    setName(e.target.value);
+  };
+  const emailBlurHandler = (e) => {
+    setEmail(e.target.value);
+  };
+  const passwordBlurHandler = (e) => {
+    setPassword(e.target.value);
+  };
+/*-------------------------------------------------------------------------------*\
+  /////////////////// SIGN IN Email/Password \\\\\\\\\\\\\\\\\\\\\\\\\\
+\*-------------------------------------------------------------------------------*/
+  const processLogin = (email, password) => {
+    setIsLoading(true);
+    return signInWithEmailAndPassword(auth, email, password);
+    /* .then((result) => {
+      const user = result.user;
+      console.log(user);
+      setError("");
+    })
+    .catch((error) => {
+      setError(error.message);
+    }); */
+  };
+/*-------------------------------------------------------------------------------*\
+  ///////////////////// CREATE NEW USER Email/Password \\\\\\\\\\\\\\\\\\\\\\\\\\
+\*-------------------------------------------------------------------------------*/
+  const registerNewUser = (email, password) => {
+    return createUserWithEmailAndPassword(auth, email, password);
+    /* .then((result) => {
+        const user = result.user;
+        console.log(user);
+        setUserName(""); //To clear the previous error
+        userName();
+      })
+      .catch((error) => {
+        setError(error.message);
+      }); */
+  };
+
+  const setUserName = () => {
+    updateProfile(auth.currentUser, { displayName: name }).then((result) => {});
+  };
+
+/*-------------------------------------------------------------------------------*\
   ///////////////////////////////// OBSERVER \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \*-------------------------------------------------------------------------------*/
   useEffect(() => {
@@ -56,56 +103,8 @@ const useFirebase = () => {
       setIsLoading(false);
     });
   }, []);
-  /*-------------------------------------------------------------------------------*\
-  /////////////////////////////// FORM HANDLER \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-\*-------------------------------------------------------------------------------*/
-  const nameBlurHandler = (e) => {
-    setName(e.target.value);
-  };
-  const emailBlurHandler = (e) => {
-    setEmail(e.target.value);
-  };
-  const passwordBlurHandler = (e) => {
-    setPassword(e.target.value);
-  };
 
-  /*-------------------------------------------------------------------------------*\
-  ///////////////////// CREATE NEW USER Email/Password \\\\\\\\\\\\\\\\\\\\\\\\\\
-\*-------------------------------------------------------------------------------*/
-  const userName = () => {
-    updateProfile(auth.currentUser, { displayName: name }).then((result) => {});
-  };
-
-  const registerNewUser = (email, password) => {
-    return createUserWithEmailAndPassword(auth, email, password);
-    /* .then((result) => {
-        const user = result.user;
-        console.log(user);
-        setError(""); //To clear the previous error
-        userName();
-      })
-      .catch((error) => {
-        setError(error.message);
-      }); */
-  };
-
-  /*-------------------------------------------------------------------------------*\
-  /////////////////// SIGN IN Email/Password \\\\\\\\\\\\\\\\\\\\\\\\\\
-\*-------------------------------------------------------------------------------*/
-  const processLogin = (email, password) => {
-    setIsLoading(true);
-    return signInWithEmailAndPassword(auth, email, password);
-    /* .then((result) => {
-        const user = result.user;
-        console.log(user);
-        setError("");
-      })
-      .catch((error) => {
-        setError(error.message);
-      }); */
-  };
-
-  /*-------------------------------------------------------------------------------*\
+/*-------------------------------------------------------------------------------*\
   ////////////////////////////////// LOG OUT \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \*-------------------------------------------------------------------------------*/
   const logOut = () => {
@@ -115,7 +114,7 @@ const useFirebase = () => {
       })
       .finally(() => setIsLoading(false));
   };
-  /*-------------------------------------------------------------------------------*\
+/*-------------------------------------------------------------------------------*\
   ////////////////////////////////// RETURN \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \*-------------------------------------------------------------------------------*/
   return {
@@ -123,7 +122,7 @@ const useFirebase = () => {
     name,
     email,
     password,
-    userName,
+    setUserName,
     error,
     isLoading,
     setError,
