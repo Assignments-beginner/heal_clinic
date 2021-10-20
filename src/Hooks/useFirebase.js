@@ -68,17 +68,7 @@ const useFirebase = () => {
   const passwordBlurHandler = (e) => {
     setPassword(e.target.value);
   };
-  /*-------------------------------------------------------------------------------*\
-  /////////////////////////////// REGISTER HANDLER \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-\*-------------------------------------------------------------------------------*/
-  const registrationHandler = (e) => {
-    e.preventDefault();
-    /*console.log("Preventing page reload from the FORM List's submit hitting.");*/
-    console.log(name);
-    console.log(email);
-    console.log(password);
-    registerNewUser(email, password);
-  };
+ 
 
   /*-------------------------------------------------------------------------------*\
   ///////////////////// CREATE NEW USER Email/Password \\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -88,17 +78,16 @@ const useFirebase = () => {
   };
 
   const registerNewUser = (email, password) => {
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((result) => {
+    return createUserWithEmailAndPassword(auth, email, password)
+      /* .then((result) => {
         const user = result.user;
         console.log(user);
         setError(""); //To clear the previous error
         userName();
-        // verifyEmail();
       })
       .catch((error) => {
         setError(error.message);
-      });
+      }); */
   };
 
   /*-------------------------------------------------------------------------------*\
@@ -131,8 +120,10 @@ const useFirebase = () => {
 \*-------------------------------------------------------------------------------*/
   return {
     user,
+    name,
     email,
     password,
+    userName,
     error,
     isLoading,
     setError,
@@ -140,7 +131,7 @@ const useFirebase = () => {
     emailBlurHandler,
     nameBlurHandler,
     signInWithGoogle,
-    registrationHandler,
+    registerNewUser,
     processLogin,
     logOut,
   };

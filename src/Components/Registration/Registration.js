@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Button, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 
 const Registration = () => {
@@ -8,10 +8,40 @@ const Registration = () => {
     passwordBlurHandler,
     emailBlurHandler,
     nameBlurHandler,
-    registrationHandler,
+    userName,
+    name,
+    email,
+    password,
+    registerNewUser,
     error,
     setError,
   } = useAuth();
+
+  const location = useLocation();
+  const history = useHistory();
+  // console.log(location.state?.from);
+  const redirect_uri = location.state?.from || "/signin";
+
+  /*-------------------------------------------------------------------------------*\
+  /////////////////////////////// REGISTER HANDLER \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\*-------------------------------------------------------------------------------*/
+  const registrationHandler = (e) => {
+    e.preventDefault();
+    /*console.log("Preventing page reload from the FORM List's submit hitting.");*/
+    console.log(name);
+    console.log(email);
+    console.log(password);
+    registerNewUser(email, password)
+      .then((result) => {
+        history.push(redirect_uri);
+        const user = result.user;
+        console.log(user);
+        setError("");
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
 
   //For Error Reload
   const reloader = () => {
