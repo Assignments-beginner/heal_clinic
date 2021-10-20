@@ -26,18 +26,6 @@ const useFirebase = () => {
 /*-------------------------------------------------------------------------------*\
   /////////////////////////// SIGN IN WITH GOOGLE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \*-------------------------------------------------------------------------------*/
-  /* const signInWithGoogle = () => {
-    
-    signInWithPopup(auth, googleProvider)
-      .then((result) => {
-        console.log(result.user);
-        setUser(result.user);
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
-  }; */
-
   //After redirect_uri
   const signInWithGoogle = () => {
     setIsLoading(true);
@@ -61,29 +49,12 @@ const useFirebase = () => {
   const processLogin = (email, password) => {
     setIsLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
-    /* .then((result) => {
-      const user = result.user;
-      console.log(user);
-      setError("");
-    })
-    .catch((error) => {
-      setError(error.message);
-    }); */
   };
 /*-------------------------------------------------------------------------------*\
   ///////////////////// CREATE NEW USER Email/Password \\\\\\\\\\\\\\\\\\\\\\\\\\
 \*-------------------------------------------------------------------------------*/
   const registerNewUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
-    /* .then((result) => {
-        const user = result.user;
-        console.log(user);
-        setUserName(""); //To clear the previous error
-        userName();
-      })
-      .catch((error) => {
-        setError(error.message);
-      }); */
   };
 
   const setUserName = () => {
@@ -122,9 +93,9 @@ const useFirebase = () => {
     name,
     email,
     password,
-    setUserName,
     error,
     isLoading,
+    setUserName,
     setError,
     passwordBlurHandler,
     emailBlurHandler,

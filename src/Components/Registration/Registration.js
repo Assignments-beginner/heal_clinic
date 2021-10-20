@@ -21,13 +21,11 @@ const Registration = () => {
   // console.log(location.state?.from);
   const redirect_uri = location.state?.from || "/greetings";
 
-  /*-------------------------------------------------------------------------------*\
+/*-------------------------------------------------------------------------------*\
   /////////////////////////////// REGISTER HANDLER \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \*-------------------------------------------------------------------------------*/
   const registrationHandler = (e) => {
-    e.preventDefault();
-    /*console.log("Preventing page reload from the FORM List's submit hitting.");*/
-
+    e.preventDefault();    
     registerNewUser(email, password)
       .then((result) => {
         history.push(redirect_uri);
