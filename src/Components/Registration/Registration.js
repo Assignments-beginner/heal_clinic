@@ -44,8 +44,8 @@ const Registration = () => {
       });
   };
 
-  //For Error Reload
-  const reloader = () => {
+  //For Remove Error
+  const removeError = () => {
     setError("");
   };
 
@@ -57,6 +57,7 @@ const Registration = () => {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Name</Form.Label>
           <Form.Control
+            onClick={removeError}
             onBlur={nameBlurHandler}
             type="text"
             placeholder="Enter Name"
@@ -66,6 +67,7 @@ const Registration = () => {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email</Form.Label>
           <Form.Control
+            onClick={removeError}
             onBlur={emailBlurHandler}
             type="email"
             placeholder="Enter Email"
@@ -75,6 +77,7 @@ const Registration = () => {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
+            onClick={removeError}
             onBlur={passwordBlurHandler}
             type="password"
             placeholder="Password"
@@ -84,7 +87,7 @@ const Registration = () => {
         <div className="mb-3">
           <span>Already have an account?</span>
           &nbsp; &nbsp;
-          <Link onClick={reloader} to="/signin">
+          <Link onClick={removeError} to="/signin">
             Sign In
           </Link>
         </div>

@@ -22,9 +22,11 @@ const LogIn = () => {
   const redirect_uri = location.state?.from || "/home";
 
   const googleLoginHandler = () => {
-    signInWithGoogle().then((result) => {
-      history.push(redirect_uri);
-    }).finally(() => setIsLoading(false));
+    signInWithGoogle()
+      .then((result) => {
+        history.push(redirect_uri);
+      })
+      .finally(() => setIsLoading(false));
   };
 
   /*-------------------------------------------------------------------------------*\
@@ -44,11 +46,12 @@ const LogIn = () => {
       })
       .catch((error) => {
         setError(error.message);
-      }).finally(() => setIsLoading(false));
+      })
+      .finally(() => setIsLoading(false));
   };
 
-  //For Error Reload
-  const reloader = () => {
+  //For Error Remove
+  const removeError = () => {
     setError("");
   };
 
@@ -60,6 +63,7 @@ const LogIn = () => {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email</Form.Label>
           <Form.Control
+            onClick={removeError}
             onBlur={emailBlurHandler}
             type="email"
             placeholder="Enter Email"
@@ -69,6 +73,7 @@ const LogIn = () => {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
+            onClick={removeError}
             onBlur={passwordBlurHandler}
             type="password"
             placeholder="Password"
@@ -78,7 +83,7 @@ const LogIn = () => {
         <div className="mb-3">
           <span>Don't have an account?</span>
           &nbsp; &nbsp;
-          <Link onClick={reloader} to="/registration">
+          <Link onClick={removeError} to="/registration">
             Create One
           </Link>
         </div>
