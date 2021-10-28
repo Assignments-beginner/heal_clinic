@@ -11,7 +11,7 @@ const Home = () => {
       .then((data) => setPrograms(data));
   }, []);
   return (
-    <div className="position-relative">
+    <div style={{backgroundColor:'#F9FBFF'}} className="position-relative">
       <div>
         <img className="img-fluid w-100" src={banner} alt="" />
         <h1
