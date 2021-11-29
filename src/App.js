@@ -14,6 +14,7 @@ import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import NotFound from "./Components/NotFound/NotFound";
 import Greetings from "./Components/Greetings/Greetings";
 
+
 function App() {
   return (
     <AuthProvider>
