@@ -30,7 +30,7 @@ const HomePrograms = (props) => {
 
           <Link to={`/services/${id}`} className="mt-auto">
             <Button className="px-4" variant="primary">
-              Enroll
+              Details
             </Button>
           </Link>
         </Card.Body>
