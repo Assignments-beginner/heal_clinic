@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Form, Button } from "react-bootstrap";
+import { Container, Form, Button, Row, Col } from "react-bootstrap";
 import { Link, useLocation, useHistory } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 
@@ -29,7 +29,7 @@ const LogIn = () => {
       .finally(() => setIsLoading(false));
   };
 
-/*-------------------------------------------------------------------------------*\
+  /*-------------------------------------------------------------------------------*\
   /////////////////////////////// SIGN IN HANDLER \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \*-------------------------------------------------------------------------------*/
   const signInHandler = (e) => {
@@ -53,57 +53,59 @@ const LogIn = () => {
   };
 
   return (
-    <Container className="mt-4 w-25">
-      <p className="text-primary fs-1">Please Sign In</p>
-      <Form>
-        {/* Email Field */}
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email</Form.Label>
-          <Form.Control
-            onClick={removeError}
-            onBlur={emailBlurHandler}
-            type="email"
-            placeholder="Enter Email"
-          />
-        </Form.Group>
-        {/* Password Field */}
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            onClick={removeError}
-            onBlur={passwordBlurHandler}
-            type="password"
-            placeholder="Password"
-          />
-        </Form.Group>
-        {/* Not having an account */}
-        <div className="mb-3">
-          <span>Don't have an account?</span>
-          &nbsp; &nbsp;
-          <Link onClick={removeError} to="/registration">
-            Create One
-          </Link>
+    <Row>
+      <Col xl={4} lg={4} sm={12} className="mt-4 px-5 mx-auto">
+        <p className="text-primary fs-1">Please Sign In</p>
+        <Form>
+          {/* Email Field */}
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Email</Form.Label>
+            <Form.Control
+              onClick={removeError}
+              onBlur={emailBlurHandler}
+              type="email"
+              placeholder="Enter Email"
+            />
+          </Form.Group>
+          {/* Password Field */}
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              onClick={removeError}
+              onBlur={passwordBlurHandler}
+              type="password"
+              placeholder="Password"
+            />
+          </Form.Group>
+          {/* Not having an account */}
+          <div className="mb-3">
+            <span>Don't have an account?</span>
+            &nbsp; &nbsp;
+            <Link onClick={removeError} to="/registration">
+              Create One
+            </Link>
+          </div>
+          {/* Display Error */}
+          <p className="text-danger">{error}</p>
+          {/* Register Button */}
+          <Button onClick={signInHandler} variant="primary" type="submit">
+            Sign In
+          </Button>
+        </Form>
+
+        <div className="mt-5 mb-5">
+          <p className="text-secondary">Or, you can also sign in with</p>
+
+          <Button
+            onClick={googleLoginHandler}
+            variant="outline-secondary px-5"
+            size="sm"
+          >
+            Google
+          </Button>
         </div>
-        {/* Display Error */}
-        <p className="text-danger">{error}</p>
-        {/* Register Button */}
-        <Button onClick={signInHandler} variant="primary" type="submit">
-          Sign In
-        </Button>
-      </Form>
-
-      <div className="mt-5 mb-5">
-        <p className="text-secondary">Or, you can also sign in with</p>
-
-        <Button
-          onClick={googleLoginHandler}
-          variant="outline-secondary px-5"
-          size="sm"
-        >
-          Google
-        </Button>
-      </div>
-    </Container>
+      </Col>
+    </Row>
   );
 };
 
