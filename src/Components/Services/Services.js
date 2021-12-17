@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
+import "../Services/Services.css";
 
 const Services = () => {
   const { dynamicId } = useParams();
@@ -33,7 +34,7 @@ const Services = () => {
       <Container className="mb-5 px-5">
         <Row className="d-flex align-items-center">
           <Col xl={6} lg={6} sm={12}>
-            <div className="border border-danger d-flex justify-content-center">
+            <div className="d-flex justify-content-center">
               <img
                 width="256"
                 height="256"
@@ -42,7 +43,7 @@ const Services = () => {
               />
             </div>
           </Col>
-          <Col xl={6} lg={6} sm={12} className="border border-danger">
+          <Col xl={6} lg={6} sm={12} className="res-doctor-intro">
             <h3>
               Hi There I'm{" "}
               <span style={{ color: "#3EBBC4" }}>
@@ -58,7 +59,7 @@ const Services = () => {
               <span>Specialist</span>
             </div>
             <div className="mt-5">
-              <p>
+              <p className="dr-advice">
                 We will elaborate everything about{" "}
                 <span style={{ color: "#3EBBC4" }}>
                   {singleServiceDetails?.serviceTitle}

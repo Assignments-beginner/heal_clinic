@@ -1,0 +1,8 @@
+@media all and (max-width: 688px) {
+  .res-doctor-intro {
+    padding-top: 70px;
+  }
+  .dr-advice {
+      text-align: justify;
+  }
+}
