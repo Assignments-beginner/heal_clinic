@@ -31,16 +31,18 @@ const Services = () => {
       </h2>
       {/* Doctor's Intro */}
       <Container className="mb-5 px-5">
-        <Row className="d-flex align-items-center justify-content-center">
-          <Col>
-            <img
-              width="256"
-              height="256"
-              src={singleServiceDetails?.doctorImg}
-              alt=""
-            />
+        <Row className="d-flex align-items-center">
+          <Col xl={6} lg={6} sm={12}>
+            <div className="border border-danger d-flex justify-content-center">
+              <img
+                width="256"
+                height="256"
+                src={singleServiceDetails?.doctorImg}
+                alt=""
+              />
+            </div>
           </Col>
-          <Col className="ms-5 pe-5">
+          <Col xl={6} lg={6} sm={12} className="border border-danger">
             <h3>
               Hi There I'm{" "}
               <span style={{ color: "#3EBBC4" }}>
@@ -70,8 +72,8 @@ const Services = () => {
       </Container>
       {/* Service Description */}
       <Container className="mb-5 p-5">
-        <div className="d-flex align-items-center">
-          <div className="me-5">
+        <Row className="d-flex align-items-center">
+          <Col className="me-5">
             <h3>{singleServiceDetails?.serviceTitle}</h3>
             <div>{singleServiceDetails?.description}</div>
             <div className="mt-3">
@@ -79,24 +81,27 @@ const Services = () => {
                 For more information check our Appointment section.
               </strong>
             </div>
-          </div>
+          </Col>
 
-          <div>
+          <Col>
             <img
               width="510"
               height="345"
               src={singleServiceDetails?.serviceImg}
               alt=""
             />
-          </div>
-        </div>
+          </Col>
+        </Row>
       </Container>
       <div className="text-center pb-5">
         <Link className="text-decoration-none" to="/home">
           {" "}
-          <span style={{ color: "#3EBBC4", fontSize: '20px' }} >Back To Services</span>{" "}
+          <span style={{ color: "#3EBBC4", fontSize: "20px" }}>
+            Back To Services
+          </span>{" "}
         </Link>
       </div>
+      {/* End of main Container */}
     </Container>
   );
 };
