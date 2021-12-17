@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 
@@ -31,16 +31,16 @@ const Services = () => {
       </h2>
       {/* Doctor's Intro */}
       <Container className="mb-5 px-5">
-        <div className="d-flex align-items-center justify-content-center">
-          <div>
+        <Row className="d-flex align-items-center justify-content-center">
+          <Col>
             <img
               width="256"
               height="256"
               src={singleServiceDetails?.doctorImg}
               alt=""
             />
-          </div>
-          <div className="ms-5 pe-5">
+          </Col>
+          <Col className="ms-5 pe-5">
             <h3>
               Hi There I'm{" "}
               <span style={{ color: "#3EBBC4" }}>
@@ -65,8 +65,8 @@ const Services = () => {
                 check the description below.
               </p>
             </div>
-          </div>
-        </div>
+          </Col>
+        </Row>
       </Container>
       {/* Service Description */}
       <Container className="mb-5 p-5">
