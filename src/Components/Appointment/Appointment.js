@@ -7,6 +7,7 @@ import {
   FloatingLabel,
   Container,
 } from "react-bootstrap";
+import "../Appointment/Appointment.css";
 
 const Appointment = () => {
   return (
@@ -17,8 +18,8 @@ const Appointment = () => {
       >
         Make An Appointement
       </h1>
-      <Container className="px-5 d-flex justify-content-between align-items-start">
-        <div>
+      <Row className="px-5 d-flex justify-content-center">
+        <Col xl={5} lg={5} sm={12} className="mx-4 form">
           <Form>
             <Row className="mb-3">
               <Form.Group as={Col} controlId="formGridText">
@@ -77,30 +78,36 @@ const Appointment = () => {
               Submit
             </Button>
           </Form>
-        </div>
-
-        <div className="p-5 shadow bg-white">
+        </Col>
+        {/* Clinic Schedule */}
+        <Col xl={5} lg={5} sm={12} className="p-5 mx-4 shadow bg-white">
           <h4 style={{ color: "#0B114A" }} className="text-uppercase">
             <i style={{ color: "#3EBBC4" }} className="fas fa-history fs-2"></i>{" "}
-            &nbsp;CLINIC SECHDULE
+            &nbsp;clinic schedule
           </h4>
           <br />
           <p>
             {" "}
-            <strong style={{ color: "#0B114A" }}>Thursday to Friday</strong> <br />{" "}
-            <span className="text-secondary">9:00am to 5:00pm</span>{" "}
+            <strong style={{ color: "#0B114A" }}>
+              Thursday to Friday
+            </strong>{" "}
+            <br /> <span className="text-secondary">9:00am to 5:00pm</span>{" "}
           </p>
 
           <p>
             {" "}
-            <strong style={{ color: "#0B114A" }}>Monday to Wednesday</strong> <br />{" "}
-            <span className="text-secondary">9:00am to 5:00pm</span>{" "}
+            <strong style={{ color: "#0B114A" }}>
+              Monday to Wednesday
+            </strong>{" "}
+            <br /> <span className="text-secondary">9:00am to 5:00pm</span>{" "}
           </p>
 
           <p>
             {" "}
-            <strong style={{ color: "#0B114A" }}>Emergancy Appointment</strong> <br />{" "}
-            <span className="text-secondary">Anytime</span> <br />{" "}
+            <strong style={{ color: "#0B114A" }}>
+              Emergancy Appointment
+            </strong>{" "}
+            <br /> <span className="text-secondary">Anytime</span> <br />{" "}
             <span style={{ color: "#3EBBC4" }}>
               ( But you have to pay extra charge for emergency )
             </span>{" "}
@@ -108,15 +115,17 @@ const Appointment = () => {
           <br />
           <span>
             {" "}
-            <i style={{ color: "#0B114A" }} class="fas fa-phone"></i> +1 209-507-5152
+            <i style={{ color: "#0B114A" }} class="fas fa-phone"></i> +1
+            209-507-5152
           </span>
           <br />
           <span>
             {" "}
-            <i style={{ color: "#0B114A" }} class="fas fa-envelope"></i> healclinic@gmail.com
+            <i style={{ color: "#0B114A" }} class="fas fa-envelope"></i>{" "}
+            healclinic@gmail.com
           </span>
-        </div>
-      </Container>
+        </Col>
+      </Row>
     </div>
   );
 };
