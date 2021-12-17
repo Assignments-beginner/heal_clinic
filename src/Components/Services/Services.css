@@ -13,7 +13,10 @@
     padding-top: 70px;
   }
   .dr-advice {
-    text-align: justify;
+    text-align: center;
+  }
+  .dr-identity {
+    text-align: center;
   }
   .service-details {
     flex-direction: column-reverse;

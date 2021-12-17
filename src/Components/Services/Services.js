@@ -44,13 +44,13 @@ const Services = () => {
             </div>
           </Col>
           <Col xl={6} lg={6} sm={12} className="res-doctor-intro">
-            <h3>
+            <h3 className="dr-identity">
               Hi There I'm{" "}
               <span style={{ color: "#3EBBC4" }}>
                 {singleServiceDetails?.doctorName}
               </span>
             </h3>
-            <div>
+            <div className="dr-identity">
               <span>The</span>&nbsp;
               <span style={{ color: "#3EBBC4" }}>
                 {singleServiceDetails?.serviceTitle}
