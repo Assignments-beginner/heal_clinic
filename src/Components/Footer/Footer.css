@@ -6,8 +6,27 @@
 .social-media i {
   color: #0b114a;
 }
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 @media all and (max-width: 688px) {
   .copyright {
     font-size: 12px;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .res-contact {
+    margin-top: 40px;
+  }
+  .res-connect {
+    padding-top: 20px;
+  }
+  .address {
+    padding-bottom: 20px;
   }
 }

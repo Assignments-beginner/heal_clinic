@@ -8,9 +8,9 @@ const Footer = () => {
       style={{ backgroundColor: "whiteSmoke" }}
       className="main-footer w-100"
     >
-      <Container className="d-flex align-items-center justify-content-between py-4">
+      <Container className="contact py-4">
         {/* ////////////////////// Connect With Us ////////////////////// */}
-        <div className="text-center d-grid">
+        <div className="res-connect text-center d-grid">
           <strong style={{ color: "#0B114A" }}>Connect With Us</strong>
           <span>Feel Free - Like, Share and Subscribe</span>
           <div className="social-media d-flex justify-content-center fs-4">
@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
 
         {/* ////////////////////// Open Hours ////////////////////// */}
-        <div className="text-center mt-2">
+        <div className="res-contact text-center">
           <p style={{ color: "#0B114A" }}>
             <strong>Open Hours</strong>
           </p>
@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
 
         {/*////////////////////// ADDRESS //////////////////////*/}
-        <div className="text-center d-grid">
+        <div className="address res-contact text-center d-grid">
           <strong style={{ color: "#0B114A" }}>ADDRESS</strong>
 
           <span>California St, Stockton, United States</span>
