@@ -1,5 +1,14 @@
-
 .tiny-shadow {
   text-shadow: 2px 2px #0B114A ;
   font-size: 70px;
+}
+
+@media all and (max-width:688px) {
+  .home {
+    font-size: 20px;
+    top: 2%;
+  }
+  .tiny-shadow {
+    font-size: 20px;
+  }
 }
