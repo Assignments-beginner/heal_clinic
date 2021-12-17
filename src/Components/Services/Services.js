@@ -31,7 +31,7 @@ const Services = () => {
         Thank you for choosing our particular services
       </h2>
       {/* Doctor's Intro */}
-      <Container className="mb-5 px-5">
+      <Container className="dr-intro-frame px-5">
         <Row className="d-flex align-items-center">
           <Col xl={6} lg={6} sm={12}>
             <div className="d-flex justify-content-center">
@@ -73,24 +73,27 @@ const Services = () => {
       </Container>
       {/* Service Description */}
       <Container className="mb-5 p-5">
-        <Row className="d-flex align-items-center">
-          <Col className="me-5">
+        <Row className="service-details">
+          <Col className="service-description">
             <h3>{singleServiceDetails?.serviceTitle}</h3>
             <div>{singleServiceDetails?.description}</div>
             <div className="mt-3">
               <strong>
-                For more information check our Appointment section.
+                For more information get an Appointment.
               </strong>
             </div>
           </Col>
 
           <Col>
+            <div className="service-img-frame">
             <img
               width="510"
               height="345"
               src={singleServiceDetails?.serviceImg}
               alt=""
+              className="service-img"
             />
+            </div>
           </Col>
         </Row>
       </Container>

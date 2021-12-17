@@ -1,8 +1,34 @@
+.service-description {
+  text-align: justify;
+}
+.service-details {
+  display: flex;
+  align-items: center;
+}
+.dr-intro-frame {
+  margin-bottom: 40px;
+}
 @media all and (max-width: 688px) {
   .res-doctor-intro {
     padding-top: 70px;
   }
   .dr-advice {
-      text-align: justify;
+    text-align: justify;
+  }
+  .service-details {
+    flex-direction: column-reverse;
+  }
+  .service-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 220px;
+  }
+  .service-img-frame {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .dr-intro-frame {
+    margin-bottom: 0px;
   }
 }
