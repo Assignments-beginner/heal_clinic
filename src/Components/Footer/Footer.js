@@ -67,7 +67,7 @@ const Footer = () => {
                 <span style={{ color: "#3EBBC4" }}>HEAL</span> CLINIC
               </strong>
             </div>
-            <span className="text-white">
+            <span className="text-white copyright">
               Copyright &copy; 2021 All Rights Reserved{" "}
             </span>
           </Container>

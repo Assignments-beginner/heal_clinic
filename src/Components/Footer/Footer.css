@@ -4,6 +4,10 @@
   bottom: 0;
 }
 .social-media i {
-  color: #0B114A;
-  
+  color: #0b114a;
+}
+@media all and (max-width: 688px) {
+  .copyright {
+    font-size: 12px;
+  }
 }
