@@ -13,6 +13,7 @@ import Services from "./Components/Services/Services";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import NotFound from "./Components/NotFound/NotFound";
 import Greetings from "./Components/Greetings/Greetings";
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <div className="page-container">
         <div className="content-wrap">
           <BrowserRouter>
+            <ScrollToTop />
             <Header></Header>
             <Switch>
               <Route exact path="/">
