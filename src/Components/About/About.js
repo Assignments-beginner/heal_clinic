@@ -21,27 +21,27 @@ const About = () => {
         <img src={ladyDoctorRes} alt="" />
       </Col>
 
-      <div className="border border-danger px-5 pb-5">
+      <div className="px-5 pb-5">
         <Row className="d-flex">
           <Col
             xl={7}
             lg={7}
             sm={12}
-            className="d-flex justify-content-center px-5 border border-danger"
+            className="d-flex justify-content-center px-5"
           >
             <div className="d-grid">
-              <p style={{ color: "#0b114a" }} className="text-center">
+              <p style={{ color: "#0b114a" }} className="priority text-center">
                 Our top priority is you. Which means you get the answers and
                 assurance you deserve with accuracy you can trust.
               </p>
 
               {/* bar-one */}
               <div>
-                <Container className="bg-white shadow radius mb-3 ps-2 py-4 pe-4 about-bar">
-                  <div className="mx-5">
+                <Container className="bg-white shadow radius mb-3 p-4 about-bar">
+                  <div className="px-4">
                     <img src={doctor} alt="" />
                   </div>
-                  <div className="d-grid align-items-center">
+                  <div className="d-grid align-items-center about-details">
                     <h5 className="text-uppercase">Professional Doctors</h5>
                     <span style={{ color: "#0b114a" }}>
                       At Heal Clinic, over 50 doctors across 20 specialties are
@@ -53,11 +53,11 @@ const About = () => {
               </div>
               {/* bar-two */}
               <div>
-                <Container className="bg-white shadow radius mb-3 ps-2 py-4 pe-4 about-bar">
-                  <div className="mx-5">
+                <Container className="bg-white shadow radius mb-3 p-4 about-bar">
+                  <div className="px-4">
                     <img src={hours} alt="" />
                   </div>
-                  <div className="d-grid align-items-center">
+                  <div className="d-grid align-items-center about-details">
                     <h5 className="text-uppercase">24 Hours patient support</h5>
                     <span style={{ color: "#0b114a" }}>
                       Our state-of-the-art treatment options, comprehensive care
@@ -69,11 +69,11 @@ const About = () => {
               </div>
               {/* bar-three */}
               <div>
-                <Container className="bg-white shadow radius mb-3 ps-2 py-4 pe-4 about-bar">
-                  <div className="mx-5">
+                <Container className="bg-white shadow radius p-4 about-bar">
+                  <div className="px-4">
                     <img src={lab} alt="" />
                   </div>
-                  <div className="d-grid align-items-center">
+                  <div className="d-grid align-items-center about-details">
                     <h5 className="text-uppercase">Excellients Lab Tests</h5>
                     <span style={{ color: "#0b114a" }}>
                       Standardized processes and procedures are used across our
@@ -88,7 +88,7 @@ const About = () => {
             </div>
           </Col>
           {/* about-img  */}
-          <Col xl={5} lg={5} sm={12} className="about-img border border-danger">
+          <Col xl={5} lg={5} sm={12} className="about-img">
             <img src={ladyDoctor} alt="" />
           </Col>
         </Row>
