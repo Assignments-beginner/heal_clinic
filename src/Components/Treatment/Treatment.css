@@ -1,11 +1,43 @@
 .radius {
-    border-radius: 15px;
-  }
-  .treatment-banner {
+  border-radius: 15px;
+}
+.treatment-banner {
+  display: flex;
+  justify-content: center;
+}
+.cancer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lightTherapy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hypnotherapy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media all and (max-width: 688px) {
+  .cancer {
     display: flex;
+    align-items: center;
     justify-content: center;
+    flex-direction: column-reverse;
   }
-  
-@media all and (max-width:688px) {
-   
+  .lightTherapy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+  .hypnotherapy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
 }
