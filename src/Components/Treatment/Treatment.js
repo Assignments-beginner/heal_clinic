@@ -3,7 +3,7 @@ import { Container, Col, Row } from "react-bootstrap";
 import "./Treatment.css";
 const Treatment = () => {
   return (
-    <div style={{ backgroundColor: "#F9FBFF" }} className="pb-5 mx-3">
+    <div style={{ backgroundColor: "#F9FBFF" }} className="pb-5 px-3">
       <h2
         style={{ color: "#0B114A" }}
         className="text-center p-5 text-uppercase"
