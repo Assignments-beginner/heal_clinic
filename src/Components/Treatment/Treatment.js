@@ -170,8 +170,8 @@ const Treatment = () => {
       </Container>
       {/* (5) Treatments Right */}
       <Container className="mb-5 p-5 bg-white shadow radius">
-        <div className="d-flex align-items-center">
-          <div className="me-5">
+        <Row className="d-flex align-items-center justify-content-between">
+          <Col xl={8} lg={8}>
             <div className="pb-5">
               <h3>Hypnotherapy</h3>
               <p>
@@ -192,16 +192,18 @@ const Treatment = () => {
               />{" "}
               <span style={{ color: "#3EBBC4" }}>Dr. Robert William</span>
             </div>
-          </div>
-          <div>
-            <img
-              width="100%"
-              height="100%"
-              src="https://media.istockphoto.com/photos/male-therapist-using-hypnosis-therapy-on-young-woman-picture-id1272205203?b=1&k=20&m=1272205203&s=170667a&w=0&h=w28_X2vYZIgVlfE8_eIFnEnxz8OSqr0W7W5zv5b90ws="
-              alt=""
-            />
-          </div>
-        </div>
+          </Col>
+          <Col xl={4} lg={4} className="treatment-banner">
+            <div>
+              <img
+                width="100%"
+                height="100%"
+                src="https://media.istockphoto.com/photos/male-therapist-using-hypnosis-therapy-on-young-woman-picture-id1272205203?b=1&k=20&m=1272205203&s=170667a&w=0&h=w28_X2vYZIgVlfE8_eIFnEnxz8OSqr0W7W5zv5b90ws="
+                alt=""
+              />
+            </div>
+          </Col>
+        </Row>
       </Container>
 
       {/* (6) Treatments Left */}
