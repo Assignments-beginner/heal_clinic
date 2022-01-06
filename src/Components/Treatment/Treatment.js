@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, Col, Row } from "react-bootstrap";
 import "./Treatment.css";
 const Treatment = () => {
   return (
@@ -13,8 +13,9 @@ const Treatment = () => {
 
       {/* (1) Treatments Right */}
       <Container className="mb-5 p-5 bg-white shadow radius">
-        <div className="d-flex align-items-center">
-          <div className="me-5">
+        <Row className="d-flex align-items-center justify-content-between border  border-success">
+          <Col xl={8} lg={8}>
+            {/* Special Treatments  */}
             <div className="pb-5">
               <h3>Breast Cancer</h3>
               <p>
@@ -24,6 +25,7 @@ const Treatment = () => {
                 carcinoma) or in other cells or tissue within the breast.
               </p>
             </div>
+            {/* Special Doctor ID  */}
             <div>
               <strong>By</strong> &nbsp;{" "}
               <img
@@ -33,18 +35,20 @@ const Treatment = () => {
                 src="https://randomuser.me/api/portraits/women/51.jpg"
                 alt=""
               />{" "}
-              <span style={{color:'#3EBBC4'}}>Dr. Virginia Apgar</span>
+              <span style={{ color: "#3EBBC4" }}>Dr. Virginia Apgar</span>
             </div>
-          </div>
-          <div>
-            <img
-              width="360"
-              height="245"
-              src="https://media.istockphoto.com/photos/breast-cancer-awareness-picture-id897593850?b=1&k=20&m=897593850&s=170667a&w=0&h=uG4wRbK1Jhl-ILDF6dFIphCmsVcnXTZRqYAF7WwOK54="
-              alt=""
-            />
-          </div>
-        </div>
+          </Col>
+          <Col xl={4} lg={4} className="treatment-banner">
+            <div>
+              <img
+                width="100%"
+                height="100%"
+                src="https://media.istockphoto.com/photos/breast-cancer-awareness-picture-id897593850?b=1&k=20&m=897593850&s=170667a&w=0&h=uG4wRbK1Jhl-ILDF6dFIphCmsVcnXTZRqYAF7WwOK54="
+                alt=""
+              />
+            </div>
+          </Col>
+        </Row>
       </Container>
 
       {/* (2) Treatments Left */}
@@ -77,7 +81,7 @@ const Treatment = () => {
                 src="https://randomuser.me/api/portraits/men/80.jpg"
                 alt=""
               />{" "}
-              <span style={{color:'#3EBBC4'}}>Dr. Richard Thomson</span>
+              <span style={{ color: "#3EBBC4" }}>Dr. Richard Thomson</span>
             </div>
           </div>
         </div>
@@ -106,7 +110,7 @@ const Treatment = () => {
                 src="https://randomuser.me/api/portraits/women/52.jpg"
                 alt=""
               />{" "}
-              <span style={{color:'#3EBBC4'}}>Dr. Ana Aslan</span>
+              <span style={{ color: "#3EBBC4" }}>Dr. Ana Aslan</span>
             </div>
           </div>
           <div>
@@ -150,7 +154,7 @@ const Treatment = () => {
                 src="https://randomuser.me/api/portraits/men/78.jpg"
                 alt=""
               />{" "}
-              <span style={{color:'#3EBBC4'}}>Dr. Josh Barret</span>
+              <span style={{ color: "#3EBBC4" }}>Dr. Josh Barret</span>
             </div>
           </div>
         </div>
@@ -177,7 +181,7 @@ const Treatment = () => {
                 src="https://randomuser.me/api/portraits/men/90.jpg"
                 alt=""
               />{" "}
-              <span style={{color:'#3EBBC4'}}>Dr. Robert William</span>
+              <span style={{ color: "#3EBBC4" }}>Dr. Robert William</span>
             </div>
           </div>
           <div>
@@ -221,7 +225,7 @@ const Treatment = () => {
                 src="https://randomuser.me/api/portraits/women/53.jpg"
                 alt=""
               />{" "}
-              <span style={{color:'#3EBBC4'}}>Dr. Helen Brooke</span>
+              <span style={{ color: "#3EBBC4" }}>Dr. Helen Brooke</span>
             </div>
           </div>
         </div>
