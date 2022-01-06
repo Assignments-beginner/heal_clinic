@@ -4,7 +4,6 @@
   .treatment-banner {
     display: flex;
     justify-content: center;
-    border: 1px solid palevioletred;
   }
   
 @media all and (max-width:688px) {

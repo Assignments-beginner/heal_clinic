@@ -13,7 +13,7 @@ const Treatment = () => {
 
       {/* (1) Treatments Right */}
       <Container className="mb-5 p-5 bg-white shadow radius">
-        <Row className="d-flex align-items-center justify-content-between border  border-success">
+        <Row className="d-flex align-items-center justify-content-between">
           <Col xl={8} lg={8}>
             {/* Special Treatments  */}
             <div className="pb-5">
@@ -53,16 +53,8 @@ const Treatment = () => {
 
       {/* (2) Treatments Left */}
       <Container className="mb-5 p-5 bg-white shadow radius">
-        <div className="d-flex align-items-center">
-          <div>
-            <img
-              width="360"
-              height="245"
-              src="https://media.istockphoto.com/photos/physical-doctor-consulting-with-patient-knee-problems-physical-picture-id1136089250?b=1&k=20&m=1136089250&s=170667a&w=0&h=Y8SzTM3U3doNltULm1--C1xaUcoK8FDvG0rdajKIjLs="
-              alt=""
-            />
-          </div>
-          <div className="ms-5">
+        <Row style={{flexDirection: 'row-reverse'}} className="d-flex align-items-center justify-content-between">
+          <Col xl={8} lg={8}>
             <div className="pb-5">
               <h3>Knee Treatments</h3>
               <p>
@@ -83,8 +75,18 @@ const Treatment = () => {
               />{" "}
               <span style={{ color: "#3EBBC4" }}>Dr. Richard Thomson</span>
             </div>
-          </div>
-        </div>
+          </Col>
+          <Col xl={4} lg={4} className="treatment-banner">
+            <div>
+              <img
+                width="100%"
+                height="100%"
+                src="https://media.istockphoto.com/photos/physical-doctor-consulting-with-patient-knee-problems-physical-picture-id1136089250?b=1&k=20&m=1136089250&s=170667a&w=0&h=Y8SzTM3U3doNltULm1--C1xaUcoK8FDvG0rdajKIjLs="
+                alt=""
+              />
+            </div>
+          </Col>
+        </Row>
       </Container>
 
       {/* (3) Treatments Right */}
@@ -92,7 +94,7 @@ const Treatment = () => {
         <div className="d-flex align-items-center">
           <div className="me-5">
             <div className="pb-5">
-              <h3>Light Therapy‎</h3>
+              <h3>Light Therapy</h3>
               <p>
                 Light therapy is a way to treat seasonal affective disorder
                 (SAD) and certain other conditions by exposure to artificial
@@ -115,8 +117,8 @@ const Treatment = () => {
           </div>
           <div>
             <img
-              width="360"
-              height="245"
+              width="100%"
+              height="100%"
               src="https://media.istockphoto.com/photos/healing-pain-with-infrared-light-therapy-picture-id1279799540?b=1&k=20&m=1279799540&s=170667a&w=0&h=Mr4gNHokbWtQGsgr0KHFbtYGKpqzomLus9Aza91DbMs="
               alt=""
             />
@@ -129,8 +131,8 @@ const Treatment = () => {
         <div className="d-flex align-items-center">
           <div>
             <img
-              width="360"
-              height="245"
+              width="100%"
+              height="100%"
               src="https://media.istockphoto.com/photos/man-at-the-psychotherapist-picture-id610262070?b=1&k=20&m=610262070&s=170667a&w=0&h=OdrgJgVfjEo4s4H7cnaTatS6PVFTQT6TPSmA5c5-yuQ="
               alt=""
             />
@@ -186,8 +188,8 @@ const Treatment = () => {
           </div>
           <div>
             <img
-              width="360"
-              height="245"
+              width="100%"
+              height="100%"
               src="https://media.istockphoto.com/photos/male-therapist-using-hypnosis-therapy-on-young-woman-picture-id1272205203?b=1&k=20&m=1272205203&s=170667a&w=0&h=w28_X2vYZIgVlfE8_eIFnEnxz8OSqr0W7W5zv5b90ws="
               alt=""
             />
@@ -200,8 +202,8 @@ const Treatment = () => {
         <div className="d-flex align-items-center">
           <div>
             <img
-              width="360"
-              height="245"
+              width="100%"
+              height="100%"
               src="https://media.istockphoto.com/photos/will-it-be-quarantine-for-you-picture-id1216012061?b=1&k=20&m=1216012061&s=170667a&w=0&h=ZRne4DgdokX4PZCvEPeVOVuIBtKYhcg8J1EgGLrPJTY="
               alt=""
             />
