@@ -133,16 +133,18 @@ const Treatment = () => {
 
       {/* (4) Treatments Left */}
       <Container className="mb-5 p-5 bg-white shadow radius">
-        <div className="d-flex align-items-center">
-          <div>
-            <img
-              width="100%"
-              height="100%"
-              src="https://media.istockphoto.com/photos/man-at-the-psychotherapist-picture-id610262070?b=1&k=20&m=610262070&s=170667a&w=0&h=OdrgJgVfjEo4s4H7cnaTatS6PVFTQT6TPSmA5c5-yuQ="
-              alt=""
-            />
-          </div>
-          <div className="ms-5">
+        <Row className="d-flex align-items-center justify-content-between">
+          <Col xl={4} lg={4} className="treatment-banner">
+            <div>
+              <img
+                width="100%"
+                height="100%"
+                src="https://media.istockphoto.com/photos/man-at-the-psychotherapist-picture-id610262070?b=1&k=20&m=610262070&s=170667a&w=0&h=OdrgJgVfjEo4s4H7cnaTatS6PVFTQT6TPSmA5c5-yuQ="
+                alt=""
+              />
+            </div>
+          </Col>
+          <Col xl={8} lg={8}>
             <div className="pb-5">
               <h3>Psychiatric Treatments‎</h3>
               <p>
@@ -163,8 +165,8 @@ const Treatment = () => {
               />{" "}
               <span style={{ color: "#3EBBC4" }}>Dr. Josh Barret</span>
             </div>
-          </div>
-        </div>
+          </Col>
+        </Row>
       </Container>
       {/* (5) Treatments Right */}
       <Container className="mb-5 p-5 bg-white shadow radius">
