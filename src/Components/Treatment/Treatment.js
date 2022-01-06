@@ -53,7 +53,10 @@ const Treatment = () => {
 
       {/* (2) Treatments Left */}
       <Container className="mb-5 p-5 bg-white shadow radius">
-        <Row style={{flexDirection: 'row-reverse'}} className="d-flex align-items-center justify-content-between">
+        <Row
+          style={{ flexDirection: "row-reverse" }}
+          className="d-flex align-items-center justify-content-between"
+        >
           <Col xl={8} lg={8}>
             <div className="pb-5">
               <h3>Knee Treatments</h3>
@@ -91,8 +94,8 @@ const Treatment = () => {
 
       {/* (3) Treatments Right */}
       <Container className="mb-5 p-5 bg-white shadow radius">
-        <div className="d-flex align-items-center">
-          <div className="me-5">
+        <Row className="d-flex align-items-center justify-content-between">
+          <Col xl={8} lg={8}>
             <div className="pb-5">
               <h3>Light Therapy</h3>
               <p>
@@ -114,16 +117,18 @@ const Treatment = () => {
               />{" "}
               <span style={{ color: "#3EBBC4" }}>Dr. Ana Aslan</span>
             </div>
-          </div>
-          <div>
-            <img
-              width="100%"
-              height="100%"
-              src="https://media.istockphoto.com/photos/healing-pain-with-infrared-light-therapy-picture-id1279799540?b=1&k=20&m=1279799540&s=170667a&w=0&h=Mr4gNHokbWtQGsgr0KHFbtYGKpqzomLus9Aza91DbMs="
-              alt=""
-            />
-          </div>
-        </div>
+          </Col>
+          <Col xl={4} lg={4} className="treatment-banner">
+            <div>
+              <img
+                width="100%"
+                height="100%"
+                src="https://media.istockphoto.com/photos/healing-pain-with-infrared-light-therapy-picture-id1279799540?b=1&k=20&m=1279799540&s=170667a&w=0&h=Mr4gNHokbWtQGsgr0KHFbtYGKpqzomLus9Aza91DbMs="
+                alt=""
+              />
+            </div>
+          </Col>
+        </Row>
       </Container>
 
       {/* (4) Treatments Left */}

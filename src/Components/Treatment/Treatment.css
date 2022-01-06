@@ -7,8 +7,5 @@
   }
   
 @media all and (max-width:688px) {
-  .treatment-banner {
-    display: flex;
-    justify-content: center;
-  }  
+   
 }
